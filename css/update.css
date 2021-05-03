@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h3{
     font-family: Calibri; 
     font-size: 25pt;         
@@ -25,4 +26,33 @@ h3{
   .block{
 align-content: center;
   }
+=======
+h3{
+    font-family: Calibri; 
+    font-size: 25pt;         
+    font-style: normal; 
+    font-weight: bold; 
+    color:black;
+    text-align: center; 
+    text-decoration: underline
+  }
+  
+  table{
+    font-family: Calibri; 
+    color:black; 
+    font-size: 11pt; 
+    font-style: normal;
+    font-weight: bold;
+    
+    background-color:white; 
+    border-collapse: collapse; 
+    border: 2px solid navy
+  }
+  table.inner{
+    border: 0px
+  }
+  .block{
+align-content: center;
+  }
+>>>>>>> 9ff675bc4ecfdb599361e2bbcb8ddd370edec65e
   
