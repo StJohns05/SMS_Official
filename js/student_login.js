@@ -38,7 +38,7 @@ var password = "";
 var conpassword = "";
 
 const error = document.querySelector("#errorTxt");
-const form = document.querySelector("#signupBtn");
+const form = document.querySelector("#signupForm");
 form.addEventListener("submit", function(event) {
   
   error.innerHTML = null;
