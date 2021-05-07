@@ -8,14 +8,18 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Sign in & Sign up Form</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <link rel="stylesheet" href="./css/student_login_styles.css" />
+    <title>Sign in & Sign up Form</title> 
   </head>
   <body>
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form class="form sign-in-form">
             <h2 class="title"><i>Student</i> <strong>Sign in</strong></h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -25,37 +29,38 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
-            <input type="submit" value="Login" class="btn solid" />
+            <input type="submit" value="Login" class="btn solid" onclick="validateLogin()"/>
             
           </form>
-          <form class="sign-up-form">
+          <form class="form sign-up-form" id="signupBtn">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" class="name"/>
+              <input type="text" placeholder="Username" class="name" required="required"/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" class="email"/>
+              <input type="email" placeholder="Email" class="email" required="required"/>
             </div>
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Registration Number" class="regno"/>
+                <input type="text" placeholder="Registration Number" class="regno" required="required"/>
             </div>
             <div class="input-field">
                 <i class="fas fa-mobile"></i>
-                <input type="text" placeholder="Contact Number" class="phoneno"/>
+                <input type="text" placeholder="Contact Number" class="phoneno" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..." />
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Passsword" class="password"/>
+                <input type="password" placeholder="Passsword" class="password" required="required"/>
             </div>
             
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder=" Confirm Password" class="conpassword" />
+              <input type="password" placeholder=" Confirm Password" class="conpassword" required="required" />
             </div>
-            <input type="submit" class="btn" value="Sign up" onclick="signup()  "/>
+            <small id="errorTxt"></small>
+            <input type="submit" class="btn" value="Sign up" />
             
             
           </form>
@@ -86,5 +91,6 @@
       </div>
     </div>
 
-    <script src="./js/student_login.js"></script>
   </body>
+  <script src="./js/student_login.js"></script>
+</html>
