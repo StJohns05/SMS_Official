@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,22 +14,23 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form" name="form1" method="POST">
+          <form class="sign-in-form" name="form1" method="post" target="#" onsubmit="return validate3()">
               <img src="images/logo.jpg" alt="">
             <h2 class="title"><i>Admin</i> <strong>Sign in</strong></h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Admin Name" name="txt1" />
+              <input type="text" placeholder="Admin mail" name="txt1" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$" title="enter ur email" required="required">
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" name="pass" />
+              <input type="password" placeholder="Password" name="pass" pattern="[0-9a-zA-z]{8,20}"  title="please provide proper input" required="required">
             </div>
             <input type="submit" value="Login" class="btn solid" onclick="valid()" />
             
           </form>
+          <script>C:\Users\DELL\Desktop\remote practicing\SMS_Official\js\admin_form_validation.js</script>
           
 
-    <script src="valid.js"></script>
+    
   </body>
 </html>
