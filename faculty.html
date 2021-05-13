@@ -8,6 +8,9 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+ 
     <link rel="stylesheet" href="./css/faculty_login_styles.css" />
     <title>Sign in & Sign up Form</title>
   </head>
@@ -19,38 +22,57 @@
             <h2 class="title"><i>Faculty</i> Sign in</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="text" placeholder="Email" />
+              <input type="email" placeholder="Email" required="required" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+
+                <!---- Password and ToggleIcon Validation--->
+
+              <input type="password" placeholder="Password" pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="Please enter maximum 8 set password" required="required" id="pass" />
+              <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
             </div>
-            <input type="submit" value="Login" class="btn solid" />
-            
+            <a href="./sidebar.html" target="_self">
+            <input type="submit" value="Login" class="btn solid"/>
+          </a>
           </form>
           <form action="#" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+
+                <!---- UserName Validation--->
+
+              <input type="text" placeholder="Username" required="required" pattern="[a-z]{1,15}" title="Please enter a valid name" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" required="required" />
             </div>
           
             <div class="input-field">
                 <i class="fas fa-mobile"></i>
-                <input type="text" placeholder="Contact Number"/>
+
+                <!----Contact Validation--->
+
+                <input type="text" placeholder="Contact Number" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..."/>
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="text" placeholder="Passsword"/>
+
+                <!---- Password Validation--->
+                
+                <input type="text" placeholder="Passsword" required="required"  pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="set maximum 8 length of password"/>
+                
             </div>
             
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder=" Confirm Password" />
+
+                <!---- Password and ToggleIcon Validation--->
+
+              <input type="password" placeholder="Confirm Password"  required="required" id="cp" />
+              <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
             </div>
             <input type="submit" class="btn" value="Sign up" />
             

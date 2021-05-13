@@ -1,3 +1,11 @@
+$(document).on('click', '.toggle-password', function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  
+  var input = $("#pass,#cp");
+  input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+
 
 
 
@@ -29,6 +37,7 @@ sign_in_btn.addEventListener("click", () => {
 });
 
 
+     
 
 var sname = "";
 var regno = "";
@@ -126,3 +135,6 @@ function validateLogin() {
 
 function login() {
 }
+
+      
+     

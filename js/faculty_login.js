@@ -10,3 +10,11 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
+
+$(document).on('click', '.toggle-password', function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  
+  var input = $("#pass,#cp");
+  input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
