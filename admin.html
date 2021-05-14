@@ -7,6 +7,9 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+ 
     <link rel="stylesheet" href="./css/admin_login_styles.css" />
     <title>Sign in & Sign up Form</title>
   </head>
@@ -22,7 +25,11 @@
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" name="pass" />
+
+              <!-- Password and ToggleValidation -->
+
+              <input type="password" placeholder="Password" name="pass" id="pass" required="required" />
+              <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
             </div>
             <input type="submit" value="Login" class="btn solid" onclick="valid()" />
             
