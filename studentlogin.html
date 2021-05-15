@@ -19,45 +19,51 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form class="form sign-in-form">
+
+          <form  class="sign-in-form" method="POST" target="#" onclick="validate2()">
+
             <h2 class="title"><i>Student</i> <strong>Sign in</strong></h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Register Number" />
+              <input type="text" placeholder="Register Number" pattern="^[A-Za-z0-9]{7,15}$" title="consists of alphanumeric"  required/><!--check once-->
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" class="password" name="password" pattern="^[0-9a-zA-Z]{8,20}$"title="enter password min length 8 and max length 20" required/>
             </div>
             <input type="submit" value="Login" class="btn solid" onclick="validateLogin()"/>
             
-          </form>
-          <form class="form sign-up-form" id="signupForm">
+
+          </form><!--check once the form validations-->
+          <form class="sign-up-form" method="post" target="#" onsubmit="return validate()">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" class="name" required="required"/>
+              <input type="text" placeholder="Username" pattern="[a-zA-Z]{4,20}" class="name" name="Username" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" class="email" required="required"/>
+              <input type="email" placeholder="Email" name="email" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$"class="email" required/><!--only accepts gmail-->
             </div>
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Registration Number" class="regno" required="required"/>
+                <input type="text" placeholder="Registration Number" name="regno" pattern="^[0-9]{2}[A-Za-z0-9]{2}[0-9a-zA-Z]{2}[0-9]{2}[0-9]{2}" title="please enter your 10 digit alphanumeric register number here" class="regno" required/><!--as per university norms-->
             </div>
             <div class="input-field">
                 <i class="fas fa-mobile"></i>
-                <input type="text" placeholder="Contact Number" class="phoneno" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..." />
+                <input type="text" placeholder="Contact Number"  name= "phonenumber " pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="phoneno" required/><!--10 digit mobile number-->
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Passsword" class="password" required="required"/>
+                <input type="password" placeholder="Passsword" name="password" pattern="[0-9a-zA-Z]{8}" class="password" required/><!--simple pattern to avoid issues-->
+
             </div>
             
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder=" Confirm Password" class="conpassword" required="required" />
+
+              <input type="password" placeholder=" Confirm Password" name="retype_password" pattern="[0-9a-zA-Z]{8}"class="conpassword" required />
+
             </div>
             <small id="errorTxt"></small>
             <input type="submit" class="btn" value="Sign up" />
@@ -90,6 +96,9 @@
         </div>
       </div>
     </div>
+
+
+    <script src="/C:\Users\DELL\Desktop\remote practicing\SMS_Official\js\student_login_validation1.js"></script>
 
   </body>
   <script src="./js/student_login.js"></script>

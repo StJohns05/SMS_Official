@@ -9,48 +9,51 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./css/faculty_login_styles.css" />
-    <title>Sign in & Sign up Form</title>
+    <title>Sign In & Sign up Form</title>
   </head>
   <body>
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+
+          <form class="sign-up-form" method="post" target="#" onsubmit="return validate2()">
+              <img src="Images/logo.jpg" alt="">
+
             <h2 class="title"><i>Faculty</i> Sign in</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Email" name="email" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$"class="email" required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" pattern="^[0-9a-zA-Z]{8,20}$"title="enter password min length 8 and max length 20" required/>
             </div>
             <input type="submit" value="Login" class="btn solid" />
             
           </form>
-          <form action="#" class="sign-up-form">
+          <form class="sign-in-form" method="POST" target="#" onclick="validate()">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" pattern="[a-zA-Z]{4,20}" class="name" name="Username" required />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email"  name="email" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$"class="email" required/>
             </div>
           
             <div class="input-field">
                 <i class="fas fa-mobile"></i>
-                <input type="text" placeholder="Contact Number"/>
+                <input type="text" placeholder="Contact Number" name= "phonenumber " pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="phoneno" required/>
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="text" placeholder="Passsword"/>
+                <input type="text" placeholder="Passsword"name="password" pattern="[0-9a-zA-Z]{8}" class="password" required/>
             </div>
             
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder=" Confirm Password" />
+              <input type="password" placeholder=" Confirm Password"name="retype_password" pattern="[0-9a-zA-Z]{8}"class="conpassword" required />
             </div>
             <input type="submit" class="btn" value="Sign up" />
             
@@ -83,6 +86,6 @@
       </div>
     </div>
 
-    <script src="./js/faculty_login.js"></script>
+    <script src="C:\Users\DELL\Desktop\remote practicing\SMS_Official\js\faculty_login_validation1.js"></script>
   </body>
 </html>
