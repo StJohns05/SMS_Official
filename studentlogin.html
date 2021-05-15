@@ -8,14 +8,20 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Sign in & Sign up Form</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <link rel="stylesheet" href="./css/student_login_styles.css" />
+    <title>Sign in & Sign up Form</title> 
   </head>
   <body>
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
+
           <form  class="sign-in-form" method="POST" target="#" onclick="validate2()">
+
             <h2 class="title"><i>Student</i> <strong>Sign in</strong></h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -25,8 +31,9 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" class="password" name="password" pattern="^[0-9a-zA-Z]{8,20}$"title="enter password min length 8 and max length 20" required/>
             </div>
-            <input type="submit" value="Login" class="btn solid" />
+            <input type="submit" value="Login" class="btn solid" onclick="validateLogin()"/>
             
+
           </form><!--check once the form validations-->
           <form class="sign-up-form" method="post" target="#" onsubmit="return validate()">
             <h2 class="title">Sign up</h2>
@@ -49,13 +56,17 @@
             <div class="input-field">
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Passsword" name="password" pattern="[0-9a-zA-Z]{8}" class="password" required/><!--simple pattern to avoid issues-->
+
             </div>
             
             <div class="input-field">
               <i class="fas fa-lock"></i>
+
               <input type="password" placeholder=" Confirm Password" name="retype_password" pattern="[0-9a-zA-Z]{8}"class="conpassword" required />
+
             </div>
-            <input type="submit" class="btn" value="Sign up" onclick="signup()  "/>
+            <small id="errorTxt"></small>
+            <input type="submit" class="btn" value="Sign up" />
             
             
           </form>
@@ -86,5 +97,9 @@
       </div>
     </div>
 
+
     <script src="/C:\Users\DELL\Desktop\remote practicing\SMS_Official\js\student_login_validation1.js"></script>
+
   </body>
+  <script src="./js/student_login.js"></script>
+</html>

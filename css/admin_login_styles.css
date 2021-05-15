@@ -40,7 +40,7 @@ input {
   z-index: 5;
 }
 
-form {
+/* form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,6 +59,33 @@ form.sign-up-form {
 
 form.sign-in-form {
   z-index: 2;
+} */
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+.form.sign-in-form {
+  z-index: 2;
+}
+
+#errorTxt {
+  color: red;
+  font-weight: 600;
+  font-size: 10px;
 }
 
 .title {
@@ -96,6 +123,13 @@ form.sign-in-form {
   font-weight: 600;
   font-size: 1.1rem;
   color: #333;
+  margin-bottom: 2px;
+}
+
+.input-field input:focus {
+  margin-right: 20px;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #8a3147;
 }
 
 .input-field input::placeholder {
@@ -248,12 +282,23 @@ form.sign-in-form {
   left: 25%;
 }
 
-.container.sign-up-mode form.sign-up-form {
+/* .container.sign-up-mode form.sign-up-form {
   opacity: 1;
   z-index: 2;
 }
 
 .container.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  z-index: 1;
+} */
+
+
+.container.sign-up-mode .form.sign-up-form {
+  opacity: 1;
+  z-index: 2;
+}
+
+.container.sign-up-mode .form.sign-in-form {
   opacity: 0;
   z-index: 1;
 }
@@ -375,7 +420,11 @@ form.sign-in-form {
 }
 
 @media (max-width: 570px) {
-  form {
+  /* form {
+    padding: 0 1.5rem;
+  } */
+
+  .form {
     padding: 0 1.5rem;
   }
 
