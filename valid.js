@@ -1,12 +1,12 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyDmmBop4v9G2UnOKr1y_5GV3AyZt-rsOjw",
-    authDomain: "login-51394.firebaseapp.com",
-    projectId: "login-51394",
-    storageBucket: "login-51394.appspot.com",
-    messagingSenderId: "910263885375",
-    appId: "1:910263885375:web:4df101509392b98bcf228a",
-    measurementId: "G-XB9T7N8Z32"
-  };
+  apiKey: "AIzaSyDuu4FIsR0yRIkOrtu6T59lqfPbN7SG53M",
+  authDomain: "sms-demo-9ec85.firebaseapp.com",
+  databaseURL: "https://sms-demo-9ec85-default-rtdb.firebaseio.com",
+  projectId: "sms-demo-9ec85",
+  storageBucket: "sms-demo-9ec85.appspot.com",
+  messagingSenderId: "401316316472",
+  appId: "1:401316316472:web:2929d9673d92fbfbb66dcd"
+};
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
