@@ -19,21 +19,21 @@
       <div class="forms-container">
         <div class="signin-signup">
           <form action="./sidebar.html" class="sign-in-form">
-            <h2 class="title"><i>Faculty</i> Sign in</h2>
+            <h2 class="title"  ><i>Faculty</i> Sign in</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" required="required" />
+              <input type="email" placeholder="Email" required="required" id="email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
 
                 <!---- Password and ToggleIcon Validation--->
 
-              <input type="password" placeholder="Password" pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="Please enter maximum 8 set password" required="required" id="pass" />
+              <input type="password" placeholder="Password" pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="Please enter maximum 8 set password" required="required" id="password" />
               <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
             </div>
             <a href="./sidebar.html" target="_self">
-            <input type="submit" value="Login" class="btn solid"/>
+            <input type="submit" value="Login" class="btn solid" id="submit"/>
           </a>
           </form>
           <form action="#" class="sign-up-form">
@@ -43,11 +43,11 @@
 
                 <!---- UserName Validation--->
 
-              <input type="text" placeholder="Username" required="required" pattern="[a-z]{1,15}" title="Please enter a valid name" />
+              <input type="text" placeholder="Username" required="required" pattern="[a-z]{1,15}" title="Please enter a valid name" id="uname" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" required="required" />
+              <input type="email" placeholder="Email" required="required" id="email" />
             </div>
           
             <div class="input-field">
@@ -55,14 +55,14 @@
 
                 <!----Contact Validation--->
 
-                <input type="text" placeholder="Contact Number" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..."/>
+                <input type="text" placeholder="Contact Number" id="phno" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..."/>
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
 
                 <!---- Password Validation--->
                 
-                <input type="text" placeholder="Passsword" required="required"  pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="set maximum 8 length of password"/>
+                <input type="text" placeholder="Passsword" required="required" id="password" pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="set maximum 8 length of password"/>
                 
             </div>
             
@@ -71,10 +71,10 @@
 
                 <!---- Password and ToggleIcon Validation--->
 
-              <input type="password" placeholder="Confirm Password"  required="required" id="cp" />
+              <input type="password" placeholder="Confirm Password"  required="required" id="cnpass" />
               <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
             </div>
-            <input type="submit" class="btn" value="Sign up" />
+            <input type="submit" class="btn" value="Sign up" id="submit"/>
             
             
           </form>

@@ -28,7 +28,7 @@
 
               <!----Register Number Validation--->
 
-              <input type="text" placeholder="Register Number" class="regno" required="required" maxlength="10" pattern="[A-Z-0-9]{10}" title="use Capital letters and numbers only, no punctuation or special characters"/>
+              <input type="text" placeholder="Email" class="regno" id="email" required="required"  />
 
              
             </div>
@@ -37,11 +37,11 @@
 
               <!----Password and ToggleIcon Validation--->
 
-              <input type="password" placeholder="Password" pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="Please enter maximum 8 set password" required="required" id="pass" />
+              <input type="password" placeholder="Password" pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="Please enter maximum 8 set password" required="required" id="password" />
               <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
             </div>
           
-             <input type="submit" value="Login" class="btn solid" onclick="validateLogin()"/>
+             <input type="submit" value="Login" class="btn solid" onclick="validateLogin()" id="submit" />
           
         
           </form>
@@ -52,18 +52,18 @@
 
               <!----UserName Validation--->
 
-              <input type="text" placeholder="Username" class="name" required="required"  pattern="[a-z]{1,15}" title="Please enter a valid name"/>
+              <input type="text" placeholder="Username" class="name" id="uname" required="required"  pattern="[a-z]{1,15}" title="Please enter a valid name"/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" class="email" required="required"/>
+              <input type="email" placeholder="Email" class="email" id="email" required="required"/>
             </div>
             <div class="input-field">
                 <i class="fas fa-user"></i>
 
                 <!----Register Number Validation--->
 
-                <input type="text" placeholder="Registration Number" class="regno" required="required" maxlength="10" pattern="[A-Z-0-9]{10}" title="use Capital letters and numbers only, no punctuation or special characters"/>
+                <input type="text" placeholder="Registration Number" class="regno" id="regno" required="required" maxlength="10" pattern="[A-Z-0-9]{10}" title="use Capital letters and numbers only, no punctuation or special characters"/>
 
             </div>
             <div class="input-field">
@@ -71,14 +71,14 @@
 
                 <!----Contact Number Validation--->
 
-                <input type="text" placeholder="Contact Number" class="phoneno" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..." />
+                <input type="text" placeholder="Contact Number" class="phoneno" id="phno" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..." />
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
 
                 <!---- Password Validation--->
 
-                <input type="password" placeholder="Passsword" class="password" required="required"  pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="set maximum 8 length of password"/>
+                <input type="password" placeholder="Passsword" class="password" id="password" required="required"  pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="set maximum 8 length of password"/>
 
             </div>
             
@@ -87,11 +87,11 @@
 
                 <!---- ToggIcon Validation--->
 
-              <input type="password" placeholder="Confirm Password"  required="required" id="cp" />
+              <input type="password" placeholder="Confirm Password"  required="required" id="cnpass" />
               <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
             </div>
             <small id="errorTxt"></small>
-            <input type="submit" class="btn" value="Sign up" />
+            <input type="submit" class="btn" value="Sign up" id="sumbit" />
             
             
           </form>

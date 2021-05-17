@@ -15,6 +15,6 @@ $(document).on('click', '.toggle-password', function() {
 
   $(this).toggleClass("fa-eye fa-eye-slash");
   
-  var input = $("#pass,#cp");
+  var input = $("#password,#cnpass");
   input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
 });

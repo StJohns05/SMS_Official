@@ -1,6 +1,6 @@
-function valid(txt1,pass)
+function valid(txt1,password)
 {
-     if ( document.form1.txt1.value == "admin" && document.form1.pass.value=="admin@123")
+     if ( document.form1.txt1.value == "admin" && document.form1.password.value=="admin@123")
     {
           document.write("Welcome.....");
            return true;
@@ -16,6 +16,6 @@ function valid(txt1,pass)
 
     $(this).toggleClass("fa-eye fa-eye-slash");
     
-    var input = $("#pass");
+    var input = $("#password");
     input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
   });

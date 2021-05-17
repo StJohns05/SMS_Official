@@ -21,17 +21,17 @@
             <h2 class="title"><i>Admin</i> <strong>Sign in</strong></h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Admin Name" name="txt1" />
+              <input type="text" placeholder="Admin Name" name="txt1" id="uname"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
 
               <!-- Password and ToggleValidation -->
 
-              <input type="password" placeholder="Password" name="pass" id="pass" required="required" />
+              <input type="password" placeholder="Password" name="pass" id="password" required="required" />
               <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
             </div>
-            <input type="submit" value="Login" class="btn solid" onclick="valid()" />
+            <input type="submit" value="Login" class="btn solid" onclick="valid()" id="submit" />
             
           </form>
           
