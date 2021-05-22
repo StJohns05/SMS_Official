@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +27,7 @@
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input class="login-password" type="password" pattern="[0-9a-zA-Z]{8}" placeholder="Password" title="enter valid password" required/>
+              <input class="login-password" type="password" pattern="[0-9a-zA-Z]{8}" placeholder="Password" required/>
             </div>
             <small id="errorTxt-signIn"></small>
             <input type="submit" value="Login" class="btn solid" />
@@ -37,24 +38,24 @@
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username"  pattern="[a-zA-Z]{4,20}" title="enter valid username" class="name" required="required"/>
+              <input type="text" placeholder="Username"  pattern="[a-zA-Z]{4,20}" class="name" required="required"/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$" title="enter valid email" class="email" required="required"/>
+              <input type="email" placeholder="Email" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$" class="email" required="required"/>
             </div>
             <div class="input-field">
                 <i class="fas fa-mobile"></i>
-                <input type="text" placeholder="Contact Number" name= "phonenumber " pattern="[6-9]{3}[0-9]{3}[0-9]{4}" title="enter valid phone number" class="phoneno" required/>
+                <input type="text" placeholder="Contact Number" pattern="[0-9]{10}" class="phoneno" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..." />
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Passsword" pattern="[0-9a-zA-Z]{8}" class="password" title="enter valid passsword" required="required"/>
+                <input type="password" placeholder="Passsword"  class="password" required="required" />
             </div>
             
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder=" Confirm Password" pattern="[0-9a-zA-Z]{8}" title="check your password" class="conpassword" required="required" />
+              <input type="password" placeholder=" Confirm Password"  class="conpassword" required="required" />
             </div>
             <small id="errorTxt-signUp"></small>
             <input type="submit" class="btn" value="Sign up" />
