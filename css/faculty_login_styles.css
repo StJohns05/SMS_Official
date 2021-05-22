@@ -40,7 +40,7 @@ input {
   z-index: 5;
 }
 
-/* form {
+form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,11 +57,12 @@ form.sign-up-form {
   z-index: 1;
 }
 
+
 form.sign-in-form {
   z-index: 2;
-} */
+}
 
-.form {
+/* .form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,9 +81,14 @@ form.sign-in-form {
 
 .form.sign-in-form {
   z-index: 2;
-}
+} */
 
-#errorTxt {
+/* #errorTxt {
+  color: red;
+  font-weight: 600;
+  font-size: 10px;
+} */
+#errorTxt-signIn, #errorTxt-signUp {
   color: red;
   font-weight: 600;
   font-size: 10px;

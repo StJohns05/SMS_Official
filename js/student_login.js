@@ -14,7 +14,8 @@ var firebaseConfig = {
 
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-var database = firebase.database();
+const database = firebase.database();
+const auth = firebase.auth();
 
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
@@ -37,11 +38,11 @@ var email = "";
 var password = "";
 var conpassword = "";
 
-const error = document.querySelector("#errorTxt");
-const form = document.querySelector("#signupForm");
-form.addEventListener("submit", function(event) {
+const errorSignUP = document.querySelector("#errorTxt-signUp");
+const signupForm = document.querySelector("#signupForm");
+signupForm.addEventListener("submit", function(event) {
   
-  error.innerHTML = null;
+  errorSignUP.innerHTML = "";
   sname = document.querySelector(".name").value.trim();
   regno = document.querySelector(".regno").value.trim();
   phoneno = document.querySelector(".phoneno").value.trim();
@@ -62,14 +63,14 @@ form.addEventListener("submit", function(event) {
     else {
 
       // alert("Password doesn't match");
-      error.innerHTML = "Password doesn't matches ...."
+      errorSignUP.innerHTML = "Password doesn't matches ...."
       event.preventDefault();
     }
   }  
   else {
 
     // alert("Password doesn't match");
-    error.innerHTML = "Please fill all the fields with valid data"
+    errorSignUP.innerHTML = "Please fill all the fields with valid data"
     event.preventDefault();
   }
 
@@ -88,41 +89,108 @@ function signup() {
   console.log(conpassword);
 
 
-  firebase.database().ref("Students/" + regno).set({
-    Name: sname,
-    Regno: regno,
-    Phoneno: phoneno,
-    Email: email,
-    Password: password
-  });
+  auth.createUserWithEmailAndPassword(email, password)
+    .then((cred) => {
 
+      console.log("Success!");
+      console.log(cred.user);
+      
+      database.ref("Students/" + regno).set({
+        Name: sname,
+        Regno: regno,
+        Phoneno: phoneno,
+        Email: email,
+        Password: password
+      });
+      document.querySelector("#signupForm").reset(); 
 
-  alert("Sign up successful");
-  document.querySelector("#sign-in-btn").click();
+      alert("Sign up successful");
+      document.querySelector("#sign-in-btn").click();
+    })
+    .catch((error) => {
+      errorSignUP.innerHTML = error.message;
+    });
 
-  
-  document.querySelector(".name").value = "";
-  document.querySelector(".regno").value = "";
-  document.querySelector(".phoneno").value = "";
-  document.querySelector(".email").value = "";
-  document.querySelector(".password").value = "";
-  document.querySelector(".conpassword").value = "";
 
 }
 
 
 
+const errorSignIn = document.querySelector("#errorTxt-signIn");
+const loginForm = document.querySelector("#loginForm");
+loginForm.addEventListener("submit", function(event) {
 
-function validateLogin() {
-  regno = document.querySelector(".regno").value;
-  password = document.querySelector(".password").value;
+  errorSignIn.innerHTML = "";
+  event.preventDefault();
 
-  
-  // If all the validations get succeed!
-  // login();
+  email = document.querySelector(".login-email").value.trim();
+  password = document.querySelector(".login-password").value.trim();
 
-}
+  if (email.length != 0 && password.length != 0) {
+
+    login();
+  }
+  else {
+
+    errorSignIn.innerHTML = "Invalid Register number or Password!";
+  }
+});
 
 
 function login() {
+
+  auth.signInWithEmailAndPassword(email, password).then((cred) => {
+
+    
+    console.log("Successfully signed-in" );
+    console.log(cred);
+    document.querySelector("#loginForm").reset();
+    // sessionStorage.setItem("user", JSON.stringify(auth.currentUser));
+    window.location.href = "./temp.html";
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    if (errorCode == "auth/wrong-password") {
+      errorSignIn.innerHTML = "Invalid Password !";
+    }
+    else if (errorCode == "auth/user-not-found") {
+      errorSignIn.innerHTML = "Invalid Email !";
+    }
+    else {
+      errorSignIn.innerHTML = "An Error Occurred, Please Try Again !";
+    }
+  });
 }
+
+
+// function login() {
+
+//   console.log(regno);
+//   console.log(password);
+
+//   database.ref("Students/" + regno).on("value", async function(snapshot) {
+      
+//     return await snapshot;
+//   }.then(
+//     function(value) {
+
+//       if (value != null) {
+          
+//         var temp = value.val().Password;
+//         if (password == temp) {
+
+//           alert("Login success");
+//         }
+//         else {
+//           errorLog.innerHTML = "Invalid Password!";
+//         }
+//       }
+//       else {
+        
+//         errorLog.innerHTML = "Invalid Register Number!";  
+//       }
+//     }
+//   ));
+// }
+
+

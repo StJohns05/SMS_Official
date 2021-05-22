@@ -82,7 +82,12 @@ form.sign-in-form {
   z-index: 2;
 }
 
-#errorTxt {
+/* #errorTxt, #errorTxtLog {
+  color: red;
+  font-weight: 600;
+  font-size: 10px;
+} */
+#errorTxt-signIn, #errorTxt-signUp {
   color: red;
   font-weight: 600;
   font-size: 10px;
