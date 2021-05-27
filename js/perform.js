@@ -11,8 +11,7 @@ $(document).ready(function() {
       function createGraph(data, container) {
           // Declare some common variables and container elements	
           var bars = [];
-          var 
-          ureContainer = $('<div id="figure"></div>');
+          var ureContainer = $('<div id="figure"></div>');
           var graphContainer = $('<div class="graph"></div>');
           var barContainer = $('<div class="bars"></div>');
           var data = $(data);
