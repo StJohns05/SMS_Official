@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+       </head>
+
+    <body style="background-color: black;">
+        
+        <h1 style="color: white;"><center>---Student Semister Marks---</center></h1>
+        <hr/>
+        
+        <form name="sem">
+            <h3 align="center" style="color: white;">Enter Student Registration No:
+                <input type="Registration no" name="reg" onfocus="this.value=''" placeholder="Please Enter Here"/></h3>
+        <table border="1" id="myTable" align="center">
+            <thead style="color: crimson;">
+                    <th>select</th>
+                    <th>Subject-Code</th>
+                    <th>Subject-Name</th>
+                    
+                    <th>Internal1</th>
+                    <th>Internal2</th>
+                    <th>Semister-1</th>
+                    <th>Total Marks</th>
+                </tr>
+            </thead>
+        <tbody>
+        </tbody>
+     </table>
+    <p>
+        <center><input type="button" value="Add new Subject details" id="newrow"/>
+    <input type="button" value="Delete subject details" id="delrow"/>
+    <input type="submit" value="Save" onclick="check()" /></center>
+</form>
+      </p>
+      <script src="studentsem.js"></script>
+</body>
+</html>
