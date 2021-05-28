@@ -1,6 +1,7 @@
-function submit() {
-    var name =  document.getElementById('name').value;
-    if (name == "") {
+function send() {
+    var firstname= document.getElementById('fname').value;
+    if(firstname== ""){
+        
         document.querySelector('.status').innerHTML = "Name cannot be empty";
         return false;
     }
@@ -15,16 +16,18 @@ function submit() {
             return false;
         }
     }
-    // var subject =  document.getElementById('subject').value;
-    // if (subject == "") {
-    //     document.querySelector('.status').innerHTML = "Subject cannot be empty";
-    //     return false;
-    // }
-    var message =  document.getElementById('message').value;
-    if (message == "") {
+    var branch= document.getElementById('branch').value;
+    
+       if(branch== ""){
+        document.querySelector('.status').innerHTML = "Please select Branch";
+        return false;
+       } 
+       
+       var message= document.getElementById('subject').value;
+    
+       if(message== ""){
         document.querySelector('.status').innerHTML = "Message cannot be empty";
         return false;
-    }
-    alert("Message sent");
+       } 
+       alert("Message sent");
 }
-   
