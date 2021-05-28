@@ -1,7 +1,7 @@
 
-src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+//src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    type="text/Javascript">
+    // type="text/Javascript"> 
         $(document).ready(function(){
           $("#newrow").click(function(){
                var addcontrols="<tr>"
@@ -31,7 +31,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           
             });
                 
-         });
+         }); 
           
        
         
