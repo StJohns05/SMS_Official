@@ -27,7 +27,7 @@
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input class="login-password" type="password" pattern="[0-9a-zA-Z]{8}" placeholder="Password" required/>
+              <input class="login-password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="enter valid password" placeholder="Password" required/>
             </div>
             <small id="errorTxt-signIn"></small>
             <input type="submit" value="Login" class="btn solid" />
@@ -46,16 +46,16 @@
             </div>
             <div class="input-field">
                 <i class="fas fa-mobile"></i>
-                <input type="text" placeholder="Contact Number" pattern="[0-9]{10}" class="phoneno" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..." />
+                <input type="text" placeholder="Contact Number"  class="phoneno" required="required" pattern="[0-9]{10}" title="Please Enter a valid Phone no ..." />
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Passsword"  class="password" required="required" />
+                <input type="password" placeholder="Passsword"  class="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required="required" />
             </div>
             
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder=" Confirm Password"  class="conpassword" required="required" />
+              <input type="password" placeholder=" Confirm Password"  class="conpassword"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="password doesnt matches" required="required" />
             </div>
             <small id="errorTxt-signUp"></small>
             <input type="submit" class="btn" value="Sign up" />

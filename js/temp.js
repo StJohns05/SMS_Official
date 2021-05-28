@@ -26,5 +26,11 @@ var firebaseConfig = {
           });
 
   }
+  var starCountRef = firebase.database().ref('Faculty/' + '9618349638');
+starCountRef.on('value', (snapshot) => {
+  const data = snapshot.val();
+  //updateStarCount(postElement, data);
+   console.log(data);
+});
 
   
