@@ -1,0 +1,121 @@
+{
+        "users": {
+                "uid": "",
+                "email": "",
+                "password": ""  
+        },
+        "user_details": {
+                "uid": "",
+                "year_of_join": "",
+                "type": "",
+                "regno": "",
+                "phoneno": "",   
+                "institution": "",
+                "branch": "",
+                "regulation": "",
+                "parents_details": {
+                        "father_name": "",
+                        "mother_name": "",
+                        "mobile_no": "",
+                        "alternate_no": ""
+                },
+                "aadhaar_details": {
+                        "aadhaar_no": "",
+                        "aadhaar_doc": ""
+                },
+                "income_details": {
+                        "income_amount": "",
+                        "income_doc": ""
+                },
+                "caste_details": {
+                        "caste_group": "",
+                        "caste_doc": ""
+                },
+                
+                "previous_education": 
+                [
+                        {
+                                "hallticket_number": "",
+                                "certificate_type": "",
+                                "certificate_doc": "drive link for pdf Or image for user's ssc Certificate"
+                        },
+                        {
+                                "certificate_type": "",
+                                "hallticket_number": "",
+                                "certificate_doc": "drive link for pdf Or image for user's intermediate Certificate"
+                        }
+                ]
+
+        },
+
+        "address_details": {
+                "uid": "",
+                "temp_address": {},
+                "permanent_address": {}
+        },
+
+        "notifications": {
+                [
+                        {
+                                "notification_type": "",
+                                "notification_title": "",
+                                "notification_body": "",
+                                "is_notification_read": false,
+                                "is_notification_show": true
+                        },
+                        {
+                                "notification_type": "",
+                                "notification_title": "",
+                                "notification_body": "",
+                                "is_notification_read": false,
+                                "is_notification_show": true
+                        },
+                        {
+                                "notification_type": "",
+                                "notification_title": "",
+                                "notification_body": "",
+                                "is_notification_read": false,
+                                "is_notification_show": true
+                        }
+                ]
+        },
+
+        "staff": {
+                [
+                        {
+                                "first_name": "",
+                                "last_name": "",
+                                "staff_id": ""
+                        }
+                ]
+        },
+
+        "course_detils": {
+                "uid": "",
+                "branch_name": "",
+                "regulation": {
+                        "reg_id": "",
+                        "semister_1": {
+                                "subjects": {
+                                        "subject_name": "",
+                                        "subject_code": "",
+                                        "subject_short_name": "",
+                                        "Subject_type": "",
+                                        "pass_status": "true/false",
+                                        "internal_marks": "",
+                                        "external_marks": ""
+                                }
+                        },
+                        "semister_2": {},
+                        "semister_3": {},
+                        "semister_4": {},
+                        "semister_5": {},
+                        "semister_6": {},
+                        "semister_7": {},
+                        "semister_8": {}
+                }
+                
+        }
+
+
+}
