@@ -41,6 +41,7 @@
                // var empt = document.forms["sem"].value;
                 var regis = /^[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{4}$/;
                 var regno = document.sem.reg.value;
+                console.log(regno);
                 if(regno.match(regis))
                 {
                     if(regno!=null || regno!=""){
