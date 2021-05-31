@@ -42,18 +42,48 @@
                 var regis = /^[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{4}$/;
                 var regno = document.sem.reg.value;
                 console.log(regno);
+               
                 if(regno.match(regis))
                 {
                     if(regno!=null || regno!=""){
-                
+                        
                     alert("Data has been saved successfully!!");
                     }
+
                 }
                     
                      else
                       {
                            alert("Please input register no properly!!");
                          }
+                
                 }
             
-        
+
+
+                document.getElementById("export").onclick=function(){
+                    var tableId= document.getElementById("tableData").id;
+                    htmlTableToExcel(tableId, filename = "");
+                }
+               var htmlTableToExcel= function(tableId, fileName = ""){
+                var excelFileName="C:\Users\AMULYA\Desktop\SMS.xlsx";
+                var TableDataType = 'application/vnd.ms-excel';
+                var selectTable = document.getElementById(tableId);
+                var htmlTable = selectTable.outerHTML.replace(/ /g, '%20');
+                
+                filename = filename?filename+'.xls':excelFileName+'.xls';
+                var excelFileURL = document.createElement("a");
+                document.body.appendChild(excelFileURL);
+                
+                if(navigator.msSaveOrOpenBlob){
+                    var blob = new Blob(['\ufeff', htmlTable], {
+                        type: TableDataType
+                    });
+                    navigator.msSaveOrOpenBlob( blob, fileName);
+                }else{
+                    
+                    excelFileURL.href = 'data:' + TableDataType + ', ' + htmlTable;
+                    excelFileURL.download = fileName;
+                    excelFileURL.click();
+                }
+            }

@@ -158,7 +158,6 @@ function login() {
       errorSignIn.innerHTML = "An Error Occurred, Please Try Again !";
     }
   });
+
+
 }
-
-
-
