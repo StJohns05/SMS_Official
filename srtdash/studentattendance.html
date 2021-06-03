@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>srtdash - Admin Dashboard</title>
+    <title>Chart - srtdash</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -35,6 +35,7 @@
     <!-- preloader area end -->
     <!-- page container area start -->
     <div class="page-container">
+       
         <!-- sidebar menu area start -->
         <div class="sidebar-menu">
             <div class="sidebar-header">
@@ -137,10 +138,12 @@
                         <ul class="notification-area pull-right">
                             <li class="dropdown">
                                 <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
-                                    
                                 </i>
                                 <div class="dropdown-menu bell-notify-box notify-box">
+                                
+                                </div>
                             </li>
+                            
                             <li class="settings-btn">
                                 <i class="ti-settings"></i>
                             </li>
@@ -157,14 +160,14 @@
                             <h4 class="page-title pull-left">Dashboard</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Basic</span></li>
+                                <li><span>Student Attendance </span></li><!-- try to add the page to which it is getting navigated-->
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Dr.V.Veranna <i class="fa fa-angle-down"></i></h4>
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Dr V.veranna <i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
                                 <a class="dropdown-item" href="#">Settings</a>
@@ -175,17 +178,33 @@
                 </div>
             </div>
             <!-- page title area end -->
+            <div class="main-content-inner">
+                <!-- bar chart end -->
+            </div>
+        </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <footer>
             
-          
+        </footer>
+        <!-- footer area end-->
+    </div>
     <!-- page container area end -->
     <!-- offset area start -->
     <div class="offset-area">
         <div class="offset-close"><i class="ti-close"></i></div>
-          <ul class="nav offset-menu-tab">
-            
+        <ul class="nav offset-menu-tab">
             <li><a data-toggle="tab" href="#settings">Settings</a></li>
-          </ul>
-        
+        </ul>
+        <div class="offset-content tab-content">
+            <div id="activity" class="tab-pane fade in show active">
+                <div class="recent-activity">
+                    <div class="timeline-task">
+                        
+                    </div>
+                </div>
+                       
+            </div>
         </div>
     </div>
     <!-- offset area end -->
@@ -198,12 +217,6 @@
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
-
-    <script src="assets/js/line-chart.js"></script>
-    <!-- all bar chart activation -->
-    <script src="assets/js/bar-chart.js"></script>
-    <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Accordion - srtdash</title>
+    <title>Chart - srtdash</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/metisMenu.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <!-- amcharts css -->
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-    <!-- style css -->
+    <!-- others css -->
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/default-css.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -34,6 +35,7 @@
     <!-- preloader area end -->
     <!-- page container area start -->
     <div class="page-container">
+        
         <!-- sidebar menu area start -->
         <div class="sidebar-menu">
             <div class="sidebar-header">
@@ -45,96 +47,53 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
-                                <ul class="collapse">
-                                    <li><a href="index.html">ICO dashboard</a></li>
-                                    <li><a href="index2.html">Ecommerce dashboard</a></li>
-                                    <li><a href="index3.html">SEO dashboard</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Sidebar
-                                        Types
-                                    </span></a>
-                                <ul class="collapse">
-                                    <li><a href="index.html">Left Sidebar</a></li>
-                                    <li><a href="index3-horizontalmenu.html">Horizontal Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Charts</span></a>
-                                <ul class="collapse">
-                                    <li><a href="barchart.html">bar chart</a></li>
-                                    <li><a href="linechart.html">line Chart</a></li>
-                                    <li><a href="piechart.html">pie chart</a></li>
-                                </ul>
-                            </li>
                             <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>UI Features</span></a>
+                                <a href="index2.html" aria-expanded="true"><i class="ti-dashboard"></i><span>Admin dashboard</span></a>
+
+                                
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Attendance</span></a>
                                 <ul class="collapse">
-                                    <li class="active"><a href="accordion.html">Accordion</a></li>
-                                    <li><a href="alert.html">Alert</a></li>
-                                    <li><a href="badge.html">Badge</a></li>
-                                    <li><a href="button.html">Button</a></li>
-                                    <li><a href="button-group.html">Button Group</a></li>
-                                    <li><a href="cards.html">Cards</a></li>
-                                    <li><a href="dropdown.html">Dropdown</a></li>
-                                    <li><a href="list-group.html">List Group</a></li>
-                                    <li><a href="media-object.html">Media Object</a></li>
-                                    <li><a href="modal.html">Modal</a></li>
-                                    <li><a href="pagination.html">Pagination</a></li>
-                                    <li><a href="popovers.html">Popover</a></li>
-                                    <li><a href="progressbar.html">Progressbar</a></li>
-                                    <li><a href="tab.html">Tab</a></li>
-                                    <li><a href="typography.html">Typography</a></li>
-                                    <li><a href="form.html">Form</a></li>
-                                    <li><a href="grid.html">grid system</a></li>
+                                    <li><a href="barchart.html">Student Attendance</a></li>
+                                    <li><a href="piechart.html">Staff Attendance</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-slice"></i><span>icons</span></a>
-                                <ul class="collapse">
-                                    <li><a href="fontawesome.html">fontawesome icons</a></li>
-                                    <li><a href="themify.html">themify icons</a></li>
-                                </ul>
+                                <a href="message description.html" aria-expanded="true"><i class="ti-palette"></i><span>Message </span></a>
+                                
                             </li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
-                                    <span>Tables</span></a>
+                                    <span>student data</span></a>
                                 <ul class="collapse">
-                                    <li><a href="table-basic.html">basic table</a></li>
-                                    <li><a href="table-layout.html">table layout</a></li>
-                                    <li><a href="datatable.html">datatable</a></li>
+                                    <li><a href="table-basic.html">student results</a></li>
+                                    <!--<li><a href="table-layout.html">table layout</a></li> -->
+                                    <li><a href="data table.html">list of students</a></li>
                                 </ul>
                             </li>
-                            <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
-                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
+                            <li><a href="maps.html"aria-expanded="true"><i class="ti-map-alt"></i> <span>Placements</span></a>
+                              <ul class="collapse">
+                                <li><a href="barchart.html">on campus</a></li>
+                                <li><a href="piechart.html">off campus</a></li>
+                              </ul>
+                            </li> 
+                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Academic Projects</span></a></li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>Pages</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>semister-wise data</span></a>
                                 <ul class="collapse">
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="login2.html">Login 2</a></li>
-                                    <li><a href="login3.html">Login 3</a></li>
-                                    <li><a href="register.html">Register</a></li>
-                                    <li><a href="register2.html">Register 2</a></li>
-                                    <li><a href="register3.html">Register 3</a></li>
-                                    <li><a href="register4.html">Register 4</a></li>
-                                    <li><a href="screenlock.html">Lock Screen</a></li>
-                                    <li><a href="screenlock2.html">Lock Screen 2</a></li>
-                                    <li><a href="reset-pass.html">reset password</a></li>
-                                    <li><a href="pricing.html">Pricing</a></li>
+                                    <li><a href="login.html">semister1 data</a></li>
+                                    <li><a href="login2.html">semister2 data</a></li>
+                                    <li><a href="login3.html">semister3 data</a></li>
+                                    <li><a href="register.html">semister4 data</a></li>
+                                    <li><a href="register2.html">semister5 data</a></li>
+                                    <li><a href="register3.html">semister6 data</a></li>
+                                    <li><a href="register4.html">semister7 data</a></li>
+                                    <li><a href="screenlock.html">semister8 data</a></li>
+                                   
                                 </ul>
                             </li>
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-exclamation-triangle"></i>
-                                    <span>Error</span></a>
-                                <ul class="collapse">
-                                    <li><a href="404.html">Error 404</a></li>
-                                    <li><a href="403.html">Error 403</a></li>
-                                    <li><a href="500.html">Error 500</a></li>
-                                </ul>
-                            </li>
+                            
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-align-left"></i> <span>Multi
                                         level menu</span></a>
@@ -151,13 +110,26 @@
                                     <li><a href="#">Item level (1)</a></li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                    <span> contact data</span></a>
+                                <ul class="collapse">
+                                    <li><a href="table-basic.html">faculty contacts</a></li>
+                                    <!--<li><a href="table-layout.html">table layout</a></li>  here the contact  should contain phno with mail id -->
+                                    <li><a href="data table.html">students contacts</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="404.html"><i class="fa fa-exclamation-triangle"></i>
+                                    <span>logout</span></a><!--direct to admin login page -->
+                               
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
+        <!-- sidebar menu area end --><!-- main content area start -->
         <div class="main-content">
             <!-- header area start -->
             <div class="header-area">
@@ -334,7 +306,7 @@
                             <h4 class="page-title pull-left">Dashboard</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Accordion</span></li>
+                                <li><span>Pie Chart</span></li>
                             </ul>
                         </div>
                     </div>
@@ -353,274 +325,40 @@
             </div>
             <!-- page title area end -->
             <div class="main-content-inner">
-                <!-- accroding start -->
+                <!-- pie chart start -->
                 <div class="row">
-                    <!-- accordion style 1 start -->
                     <div class="col-lg-6 mt-5">
                         <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Accordion 1</h4>
-                                <div id="accordion1" class="according">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="card-link" data-toggle="collapse" href="#accordion11">Collapsible Group
-                                                Item #1</a>
-                                        </div>
-                                        <div id="accordion11" class="collapse show" data-parent="#accordion1">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion12">Collapsible
-                                                Group Item #2</a>
-                                        </div>
-                                        <div id="accordion12" class="collapse" data-parent="#accordion1">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion13">Collapsible
-                                                Group Item #3</a>
-                                        </div>
-                                        <div id="accordion13" class="collapse" data-parent="#accordion1">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="ampiechart1"></div>
                         </div>
                     </div>
-                    <!-- accordion style 1 end -->
-                    <!-- accordion style 2 start -->
                     <div class="col-lg-6 mt-5">
                         <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Accordion 1</h4>
-                                <div id="accordion2" class="according accordion-s2">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="card-link" data-toggle="collapse" href="#accordion21">Collapsible Group
-                                                Item #1</a>
-                                        </div>
-                                        <div id="accordion21" class="collapse show" data-parent="#accordion2">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion22">Collapsible
-                                                Group Item #2</a>
-                                        </div>
-                                        <div id="accordion22" class="collapse" data-parent="#accordion2">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion23">Collapsible
-                                                Group Item #3</a>
-                                        </div>
-                                        <div id="accordion23" class="collapse" data-parent="#accordion2">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="ampiechart2"></div>
                         </div>
                     </div>
-                    <!-- accordion style 2 end -->
-                    <!-- accordion style 3 start -->
                     <div class="col-lg-6 mt-5">
                         <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Accordion 1</h4>
-                                <div id="accordion3" class="according accordion-s3">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="card-link" data-toggle="collapse" href="#accordion31">Collapsible Group
-                                                Item #1</a>
-                                        </div>
-                                        <div id="accordion31" class="collapse show" data-parent="#accordion3">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion32">Collapsible
-                                                Group Item #2</a>
-                                        </div>
-                                        <div id="accordion32" class="collapse" data-parent="#accordion3">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion33">Collapsible
-                                                Group Item #3</a>
-                                        </div>
-                                        <div id="accordion33" class="collapse" data-parent="#accordion3">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="ampiechart3"></div>
                         </div>
                     </div>
-                    <!-- accordion style 3 end -->
-                    <!-- accordion style 4 start -->
                     <div class="col-lg-6 mt-5">
                         <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Accordion 1</h4>
-                                <div id="accordion4" class="according accordion-s3 gradiant-bg">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="card-link" data-toggle="collapse" href="#accordion41">Collapsible Group
-                                                Item #1</a>
-                                        </div>
-                                        <div id="accordion41" class="collapse show" data-parent="#accordion4">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion42">Collapsible
-                                                Group Item #2</a>
-                                        </div>
-                                        <div id="accordion42" class="collapse" data-parent="#accordion4">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion43">Collapsible
-                                                Group Item #3</a>
-                                        </div>
-                                        <div id="accordion43" class="collapse" data-parent="#accordion4">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="highpiechart4"></div>
                         </div>
                     </div>
-                    <!-- accordion style 4 end -->
-                    <!-- accordion style 5 start -->
                     <div class="col-lg-6 mt-5">
                         <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Accordion 1</h4>
-                                <div id="accordion5" class="according accordion-s2 gradiant-bg">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="card-link" data-toggle="collapse" href="#accordion51">Collapsible Group
-                                                Item #1</a>
-                                        </div>
-                                        <div id="accordion51" class="collapse show" data-parent="#accordion5">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion52">Collapsible
-                                                Group Item #2</a>
-                                        </div>
-                                        <div id="accordion52" class="collapse" data-parent="#accordion5">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion53">Collapsible
-                                                Group Item #3</a>
-                                        </div>
-                                        <div id="accordion53" class="collapse" data-parent="#accordion5">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="highpiechart5"></div>
                         </div>
                     </div>
-                    <!-- accordion style 5 end -->
-                    <!-- accordion style 6 start -->
                     <div class="col-lg-6 mt-5">
                         <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Accordion 1</h4>
-                                <div id="accordion6" class="according gradiant-bg">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="card-link" data-toggle="collapse" href="#accordion61">Collapsible Group
-                                                Item #1</a>
-                                        </div>
-                                        <div id="accordion61" class="collapse show" data-parent="#accordion6">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion62">Collapsible
-                                                Group Item #2</a>
-                                        </div>
-                                        <div id="accordion62" class="collapse" data-parent="#accordion6">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion63">Collapsible
-                                                Group Item #3</a>
-                                        </div>
-                                        <div id="accordion63" class="collapse" data-parent="#accordion6">
-                                            <div class="card-body">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque porro alias assumenda accusamus incidunt odio molestiae maxime quo atque in et quaerat, vel unde aliquam aperiam quidem consectetur omnis dicta officiis? Dolorum, error dolorem!
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="highpiechart6"></div>
                         </div>
                     </div>
-                    <!-- accordion style 6 end -->
                 </div>
-                <!-- accroding end -->
+                <!-- pie chart end -->
             </div>
         </div>
         <!-- main content area end -->
@@ -820,6 +558,30 @@
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- start zingchart js -->
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+    <!-- start amchart js -->
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/animate/animate.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <!-- all line chart activation -->
+    <script src="assets/js/line-chart.js"></script>
+    <!-- all bar chart activation -->
+    <script src="assets/js/bar-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="assets/js/pie-chart.js"></script>
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
