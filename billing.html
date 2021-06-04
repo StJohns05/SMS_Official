@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+//     $('#mainform').submit(function() {
+//     $('#formdata_container').show();
+//     $('#formdata').html($(this).serialize());
+//     return false;
+// });
+
+// $('#enableselect').click(function() {
+//     $('#mainform input[name=animal]')
+//         .attr("disabled", true);
+    
+//     $('#animal-select')
+//         .attr('disabled', false)
+//     	.attr('name', 'animal');
+    
+//     $('#enableselect').hide();
+//     return false;
+// });
+    </script>
+    <style>
+        #formdata_container {
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
+body{
+    text-align: justify;
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <h1>Payment Reciept</h1>
+    <hr>
+    
+    <div>
+        <form id="mainform">
+          <h3>  Name </h3>
+            FirstName<input type="text" value="Anitha" readonly > <br> <br>
+
+            LastName<input type="text" value="Karre" readonly> <br> <br>
+                    
+            Registration Number <input type="text" value="17g31a0517" readonly> <br> <br>
+            Branch <input type="text" value="CSE" readonly> <br> <br>
+            <h3>Address</h3>
+            From <input type="text" value="Kurnool" readonly>&nbsp; To <input type="text" value="College" readonly>
+           <h3>Date</h3>
+           <input type="date" readonly>
+           <h3>Payment Method</h3>
+          Cash <input type="radio" disabled> <br> <br>
+          Card <input type="radio" checked readonly> <br> <br>
+          UPI <input type="radio" disabled>
+          <hr>
+           Total Amount Paid &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 4000Rs/-.
+        </form>
+    </div>
+    
+    <div id="formdata_container" style="display:none">
+        <div>Submitted data:</div>
+        <div id="formdata">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -92,7 +92,7 @@ function signup() {
       console.log("Success!");
       console.log(cred.user);
       
-      database.ref("Students/" + regno).set({
+      database.ref("Students/" + cred.user.uid).set({
         Name: sname,
         Regno: regno,
         Phoneno: phoneno,
@@ -100,6 +100,12 @@ function signup() {
         Password: password
       });
       document.querySelector("#signupForm").reset(); 
+
+      // document.querySelector("#signupForm").reset(); 
+      // document.querySelector("#signupForm").reset(); 
+      cred.user.updateProfile({
+        displayName: sname
+      });
 
       alert("Sign up successful");
       document.querySelector("#sign-in-btn").click();
@@ -143,7 +149,7 @@ function login() {
     console.log(cred);
     document.querySelector("#loginForm").reset();
     // sessionStorage.setItem("user", JSON.stringify(auth.currentUser));
-    window.location.href = "./temp.html";
+    window.location.href = "./student_dashboard.html"
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -158,6 +164,17 @@ function login() {
     }
   });
 }
+
+//toggle button
+$(document).on('click', '.toggle-password', function() {
+
+  $(this).toggleClass("bi-eye");
+  
+  var input = $("#Pass,#pass");
+  
+  input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+
 
 
 

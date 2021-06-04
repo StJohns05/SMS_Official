@@ -89,17 +89,17 @@ function signup() {
       console.log("Success!");
       console.log(cred.user);
       
-      database.ref("Faculty/" + phoneno).set({
+      database.ref("Faculty/" + cred.user.uid).set({
         Name: sname,
         Phoneno: phoneno,
         Email: email,
         Password: password
       });
+      
       document.querySelector("#signupForm").reset(); 
+      
       cred.user.updateProfile({
-        displayName: sname,
-        phoneNo:phoneno
-
+        displayName: sname
       });
 
       alert("Sign up successful");
@@ -144,7 +144,7 @@ function login() {
     console.log(cred);
     document.querySelector("#loginForm").reset();
     // sessionStorage.setItem("user", JSON.stringify(auth.currentUser));
-    window.location.href = "./facultyafterlogin.html";
+    window.location.href = "fac_dash.html"
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -159,6 +159,18 @@ function login() {
     }
   });
 }
+
+
+$(document).on('click', '.toggle-password', function() {
+
+  $(this).toggleClass("bi-eye");
+  
+  var input = $("#Pass,#pass");
+  
+  input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+
+
 
 
 

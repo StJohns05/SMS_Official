@@ -82,7 +82,8 @@ form.sign-in-form {
   z-index: 2;
 }
 
-#errorTxt {
+
+#errorTxt-signIn, #errorTxt-signUp {
   color: red;
   font-weight: 600;
   font-size: 10px;
@@ -448,3 +449,9 @@ form.sign-in-form {
     left: 50%;
   }
 }
+.toggle-password {
+  margin-left: 350px;
+  position: absolute;
+  margin-top: 15px;
+  
+  }

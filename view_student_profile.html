@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Form</title>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+   
+   <style>
+      input,#d1 { 
+            pointer-events: none; 
+        } 
+    </style>
+    
+</head>
+<body>
+  <center><h1>Fill the Details</h1></center>
+    <form action="#">
+ <hr>
+      
+  <strong> Name : </strong><input type="text" name="name"  id="name"> <br> <br>
+ <strong> Email : </strong><input type="email" name="email"  id="email"><br> <br>
+ <strong> Mobile Number :</strong> <input type="text" name="phone"  id="phone"><br> <br>
+ <strong>Registration Number :</strong>  <input type="text" name="reg" id="regno"> <br><br>
+ <hr>
+
+
+ <center><h2>User Details</h2></center><hr>
+
+       <!-- <strong> Unique Identity Number : </strong><input type="text" name="uid" id="uid"><br><br> -->
+        
+       
+            <strong>  Institution Name : </strong><input type="text" name="Institution" id="institution"><br><br>
+            <strong> Year Of Joining : </strong><input type="text" name="join" pattern="\d{4}" id="joinyear"><br><br>
+          <strong>  Regulation : </strong><input type="text" name="regulation" id="regulation"><br><br>
+         
+         <strong >Branch : </strong> <input type="text" name="branch" id="branch">
+         
+         <hr>
+
+         
+ 
+<!--Personal Details-->
+
+ <center><h2>Parent Details</h2> <hr></center>
+ 
+ <strong> Father Name : </strong><input type="text" name="fname"  id="fname"> <br> <br>
+ <strong> Mother Name : </strong><input type="text" name="mname"  id="mname"> <br> <br>
+ <strong> Mobile Number :</strong> <input type="text" name="phone"   id="fphone"><br> <br>
+ <strong> Alternate Mobile Number :</strong> <input type="text" name="phone"   id="altphone"><br> <br>
+ <hr>
+ 
+ <center><h2>Personal Details</h2> <hr></center>
+  
+  <strong>Date of Birth :</strong> <input type="text" name="dob" id="dob"> <br> <br>
+  <strong >Gender : </strong> <input type="text" name="gender" id="gender"> <br> <br>
+
+ <strong>Aadhar Number : </strong> <input type="text" name="aadhar" id="aadhar"> <strong> URL : </strong><input type="url" name="aadhardoc" id="aadhardoc"  placeholder="Input your google docs link"size=30 required> <br><br>
+ <strong>Annual Income : </strong>  <input type="text" name="income" id="income"> <strong> URL : </strong> <input type="url" name="incomedoc" id="incomedoc" placeholder="Input your google docs link"size=30 required> <br><br>
+ <strong> Caste : </strong><input type="text" name="caste" id="caste"> <strong> URL : </strong><input type="url" name="castedoc" id="castedoc" placeholder="Input your google docs link"size=30 required><br><br>
+
+
+ <!-------Automatic filled if one field is same as another------->
+
+
+ <strong for="primaryaddress">Temporary Address:</strong>
+  <input type="text" name="Address"id="primaryaddress"required /> 
+  <strong for="primaryzip">Zip code:</strong>
+  <input type="text"name="Zip code"id="primaryzip" required /> <br><br>		
+	<strong for="secondaryaddress">Permanent	Address:</strong>
+	<input type="text"name="Address"id="secondaryaddress"required> 
+	<strong for="secondaryzip">Zip code:</strong>
+	<input type="text"name="Zip code"id="secondaryzip" required > <br><br>
+       
+  <hr>
+
+  <!--Previous Graduation Details-->
+
+       <center><h2>Previous Graduation Details</h2></center> <hr>
+ <h4>SSC Details: </h4><br>
+     <strong>  HallTicket Number : </strong><input type="text" name="halticket" id="sscticket"> <br><br>
+      <strong> Percentage : </strong><input type="text" name="percentage"   title="This must be a number with up to 2 decimal places and/or %/convert cgpa into percentage" id="sscpercentage"><br><br>
+       <strong for="url">Certificate :</strong>
+        <input type="url" name="url" id="sscurl" placeholder="Input your google docs link" size="30"required> <br><br>
+ <strong> Year Of Pass : </strong><input type="text" name="year"  id="sscyear"><br><br>
+ <h4>Intermediate/Diploma Details : </h4><br>
+       <strong> HallTicket Number : </strong><input type="text" name="halticket" id="interticket"> <br><br>
+      <strong>  Percentage : </strong><input type="text" name="percentage"  title="This must be a number with up to 2 decimal places and/or %" id="interpercentage"><br><br>
+        <strong for="url">Certificate :</strong>
+        <input type="url" name="url" id="interurl" placeholder="Input your google docs link" size="30"required> <br><br>
+       <strong> Year Of Pass : </strong><input type="text" name="year"  id="interyear"><br><br>
+<hr>
+
+<center><a href="./update_student_profile.html"> <input type="button" name="update" id="update" value="update"></a></center>
+
+ 
+</form>
+<script src="./js/view_student_profile.js"></script>
+</body>
+</html>
