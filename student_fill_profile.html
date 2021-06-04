@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student fill Form</title>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+
+    <style>
+        #name,#email,#phone,#reg{
+          pointer-events: none; 
+        }
+        body {  
+        font-family: Calibri, Helvetica, sans-serif;  
+       
+               margin-top:100px;
+               margin-bottom:100px;
+               margin-left:100px;
+                margin-right:100px;
+                background-color:white;
+                background-size: cover;
+                background-position: center;
+                      
+                     
+      
+      }  
+      
+ .container {   
+        padding: 50px;   
+        background-color:#8a3147;  
+        
+    } 
+     input{
+      width: 500px;
+      background-color: #f0f0f0;
+      position: relative;
+      display: grid;
+      outline: none;
+      line-height: 1;
+  font-weight: 500;
+  font-size: 1.1rem;
+    }
+    li{
+      list-style: none;
+    }
+    #same{
+  width: auto;
+  }
+
+        </style>
+  
+</head>
+
+<body style="color: white">
+    <div class="container"> 
+  <center><h1>--FILL THE DETAILS--</h1></center>
+    <form action="#">
+ <hr>
+      <ul>
+  <li><strong> Name : </strong><input type="text" name="name" pattern="[a-zA-Z]{4,20}" title="enter valid name" id="name"></li> <br>
+ <li><strong> Email : </strong><input type="email" name="email" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$" title="enter valid email" id="email"></li><br>
+<li><strong> Mobile Number :</strong> <input type="text" name="phone" pattern="(6|7|8|9)\d{9}" title="Enter valid number" id="phone"></li><br> 
+<li><strong>Registration Number :</strong>  <input type="text" name="reg" id="regno"> </li><br>
+ <hr>
+</ul>
+
+ <center><h2>User Details</h2></center><hr>
+
+       <!-- <strong> Unique Identity Number : </strong><input type="text" name="uid" id="uid"><br><br> -->
+        
+       
+            <strong>  Institution Name : </strong><input type="text" name="Institution" id="institution"><br>
+            <strong> Year Of Joining : </strong><input type="text" name="join" pattern="\d{4}" id="joinyear"></li><br> 
+          <strong>  Regulation : </strong><input type="text" name="regulation" id="regulation"><br>
+        
+         <strong >Branch : </strong> 
+            <label><b>Select Branch:</b></label>
+            <select id="branch">
+              <option value="">Branch</option>
+              <option value="CSE">CSE</option>
+              <option value="ECE">ECE</option>
+              <option value="MECH">MECH</option>
+              <option value="EEE">EEE</option>
+              <option value="CIVIL">CIVIL</option>
+              <option value="AI">ARTIFICIAL INTELLIGENCE</option>
+              
+            </select><br>
+          </li>
+         <hr>
+        </ul>
+         
+ 
+<!--Personal Details-->
+
+ <center><h2>Parent Details</h2> <hr></center>
+ 
+<li><strong> Father Name : </strong><input type="text" name="fname" pattern="[a-zA-Z]{4,20}" id="fname"> <br> 
+<li><strong> Mother Name : </strong><input type="text" name="mname" pattern="[a-zA-Z]{4,20}" id="mname"> <br> 
+<li><strong> Mobile Number :</strong> <input type="text" name="phone" pattern="(6|7|8|9)\d{9}" title="Enter valid number" id="fphone"><br> 
+<li> <strong> Alternate Mobile Number :</strong> <input type="text" name="phone" pattern="(6|7|8|9)\d{9}" title="Enter valid number" id="altphone"><br> 
+ <hr>
+ 
+ <center><h2>Personal Details</h2> <hr></center>
+ 
+<li><strong>Date of Birth :</strong> <input type="date" name="date"placeholder="dd-mm-yyyy" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"  id="dob"> <br>
+ <!-- <strong> Gender : </strong><input type="radio" name="gender" id="female">Female
+                            <input type="radio" name="gender" id="male">Male <br> <br> -->
+                            <strong >Gender : </strong> 
+              <select id="gender">
+                <option value="">gender</option>
+              <option value="female">female</option>
+              <option value="male">male</option></select><br> <br>
+
+ <strong>Aadhar Number : </strong> <input type="text" name="aadhar" id="aadhar"> <strong> URL : </strong><input type="url" name="aadhardoc" id="aadhardoc" pattern="http://[A-Za-z]+[A-Za-z0-9\.-]*[^\.]\.com" title="A valid value must begin with the string 'http://', followed by a valid .com domain name"
+ placeholder="Input your google docs link"size=30 required> <br>
+ <strong>Annual Income : </strong>  <input type="text" name="income" id="income"> <strong> URL : </strong> <input type="url" name="incomedoc" id="incomedoc" pattern="https://.*"placeholder="Input your google docs link"size=30 required> <br>
+  <strong> Caste : </strong><input type="text" name="caste" id="caste"> <strong> URL : </strong><input type="url" name="castedoc" id="castedoc" pattern="https://.*"placeholder="Input your google docs link"size=30 required><br>
+
+
+ <!-------Automatic filled if one field is same as another------->
+
+
+ <strong for="primaryaddress">Temporary Address:</strong>
+  <input type="text" name="Address"id="primaryaddress"required /> <br> 
+  <strong for="primaryzip">Zip code:</strong>
+  <input type="text"name="Zip code"id="primaryzip"pattern="[0-9]{6}"required /> <br>
+  <input type="checkbox"id="same"name="same"onchange="addressFunction()" >
+	<small for="same">If temporary address same as Permanent address select this box\Fill the Permanent address field</small> <br>		
+	<strong for="secondaryaddress">Permanent	Address:</strong>
+	<input type="text"name="Address"id="secondaryaddress"required> <br>
+	<strong for="secondaryzip">Zip code:</strong>
+	<input type="text"name="Zip code"id="secondaryzip"pattern="[0-9]{6}" required > <br>
+       
+  <hr>
+
+  <!--Previous Graduation Details-->
+
+       <center><h2>Previous Graduation Details</h2></center> <hr>
+ <h4>SSC Details: </h4><br>
+     <strong>  HallTicket Number : </strong><input type="text" name="halticket" id="sscticket"> <br>
+      <strong> Percentage : </strong><input type="text" name="percentage"  pattern="[0-9]+([\.][0-9]{0,2})?" title="This must be a number with up to 2 decimal places and/or %/convert cgpa into percentage" id="sscpercentage"><br>
+       <strong for="url">Certificate :</strong>
+        <input type="url" name="url" id="sscurl" placeholder="Input your google docs link"pattern="https://.*" size="30"required> <br>
+ <strong> Year Of Pass : </strong><input type="text" name="year" pattern="\d{4}" id="sscyear"><br>
+ <h4>Intermediate/Diploma Details : </h4><br>
+       <strong> HallTicket Number : </strong><input type="text" name="halticket" id="interticket"> <br>
+      <strong>  Percentage : </strong><input type="text" name="percentage" pattern="[0-9]+([\.][0-9]{0,2})?" title="This must be a number with up to 2 decimal places and/or %" id="interpercentage"><br>
+        <strong for="url">Certificate :</strong>
+        <input type="url" name="url" id="interurl" placeholder="Input your google docs link"pattern="https://.*" size="30"required> <br>
+       <strong> Year Of Pass : </strong><input type="text" name="year" pattern="\d{4}" id="interyear"><br>
+<hr>
+
+
+<center><input type="button" name="update" id="update" value="save">
+                  <a href="student_view.html"> <input type="button" name="view" id="view" value="Click Here To View Profile" >  </a></center>
+
+ 
+</form>
+<script src="js/update.js"></script>
+</body>
+</html>

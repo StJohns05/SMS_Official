@@ -1,12 +1,11 @@
 $(document).on('click', '.toggle-password', function() {
 
-  $(this).toggleClass("fa-eye fa-eye-slash");
+  $(this).toggleClass("bi-eye");
   
-  var input = $("#password,#cnpass");
+  var input = $("#password,#Password");
+  
   input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
 });
-
-
 
 
 // Your web app's Firebase configuration
@@ -133,8 +132,13 @@ function validateLogin() {
 }
 
 
-function login() {
-}
+// firebase.auth().signOut().then(function() {
+//   // Sign-out successful.
+//   console.log('User Logged Out!');
+// }).catch(function(error) {
+//   // An error happened.
+//   console.log(error);
+// });
 
       
      

@@ -13,6 +13,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="./css/student_login_styles.css" />
     <title>Sign in & Sign up Form</title> 
   </head>
@@ -39,8 +40,9 @@
               <!----Password and ToggleIcon Validation--->
 
               <input type="password" placeholder="Password" pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="Please enter maximum 8 set password" required="required" id="password" />
-              <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
-            </div>
+              <span toggle="#password-field" class="bi bi-eye-slash  toggle-password" ></span>
+               
+                           </div>
           
              <input type="submit" value="Login" class="btn solid" onclick="validateLogin()" id="submit" />
           
@@ -79,8 +81,8 @@
 
                 <!---- Password Validation--->
 
-                <input type="password" placeholder="Passsword" class="password" id="password" required="required"  pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="set maximum 8 length of password"/>
-
+                <input type="password" placeholder="Passsword" class="password" id="Password" required="required"  pattern="^[a-zA-Z0-9!@#$%^&*]{6,16}$" title="set maximum 8 length of password"/>
+                <span toggle="#password-field" class="bi bi-eye-slash  toggle-password" ></span> 
             </div>
             
             <div class="input-field">
@@ -89,7 +91,7 @@
                 <!---- ToggIcon Validation--->
 
               <input type="password" placeholder="Confirm Password"  required="required" id="cnpass" />
-              <span toggle="#password-field" class="fa fa-fw fa-eye  toggle-password" ></span> 
+              <!-- <span toggle="#password-field" class="bi bi-eye-slash  toggle-password" ></span>  -->
             </div>
             <small id="errorTxt"></small>
             <input type="submit" class="btn" value="Sign up" id="sumbit" />

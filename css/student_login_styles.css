@@ -399,9 +399,9 @@ form.sign-in-form {
     left: 50%;
   }
 }
-.toggle-password{
-  margin-left: 330px;
+.toggle-password {
+  margin-left: 350px;
   position: absolute;
-  margin-top: 20px;
+  margin-top: 15px;
   
   }

@@ -13,8 +13,9 @@ sign_in_btn.addEventListener("click", () => {
 
 $(document).on('click', '.toggle-password', function() {
 
-  $(this).toggleClass("fa-eye fa-eye-slash");
+  $(this).toggleClass("bi-eye");
   
-  var input = $("#password,#cnpass");
+  var input = $("#password,#Password");
+  
   input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
 });

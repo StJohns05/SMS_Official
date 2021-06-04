@@ -2,18 +2,27 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <style>
+            .container{
+                background-color: #8a3147;
+                margin-left: 50px;
+                margin-right: 50px;
+                padding: 100px;
+
+            }
+        </style>
        </head>
 
-    <body style="background-color: black;">
+    <body style="background-color: white;">
         
-        <h1 style="color: white;"><center>---Student Semister Marks---</center></h1>
+        <h1 style="color: black;"><center>---Student Semester Marks---</center></h1>
         <hr/>
-        
+        <div class="container">
         <form name="sem">
             <h3 align="center" style="color: white;">Enter Student Registration No:
                 <input type="Registration no" name="reg" onfocus="this.value=''" placeholder="Please Enter Here"/></h3>
         <table border="1" id="myTable" align="center">
-            <thead style="color: crimson;">
+            <thead style="color: white;">
                     <th>select</th>
                     <th>Subject-Code</th>
                     <th>Subject-Name</th>
@@ -32,6 +41,7 @@
     <input type="button" value="Delete subject details" id="delrow"/>
     <input type="submit" value="Save" onclick="check()" /></center>
 </form>
+</div>
       </p>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script type="text/javascript" src="js/studentsem.js"></script>

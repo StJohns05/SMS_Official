@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student view Form</title>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+   
+   <style>
+      input,#d1 { 
+            pointer-events: none; 
+        } 
+        body {  
+        font-family: Calibri, Helvetica, sans-serif;  
+       
+               margin-top:100px;
+               margin-bottom:100px;
+               margin-left:100px;
+                margin-right:100px;
+                background-color:white;
+                background-size: cover;
+                background-position: center;
+                       
+                     
+      
+      }  
+          
+ .container {   
+        padding: 50px;   
+        background-color:#8a3147;  
+        
+    } 
+     input{
+       width: 500px;
+      background-color: #f0f0f0;
+      position: relative;
+      display: grid;
+      outline: none;
+      line-height: 1;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    #same{
+  width: auto;
+  }
+    
+    </style>
+    
+</head>
+<body style="color: white;">
+    <div class="container"> 
+  <center><h1>--CHECK THE DETAILS--</h1></center>
+    <form action="#">
+ <hr>
+      
+  <strong> Name : </strong><input type="text" name="name"  id="name"> <br> 
+ <strong> Email : </strong><input type="email" name="email"  id="email"><br> 
+ <strong> Mobile Number :</strong> <input type="text" name="phone"  id="phone"><br> 
+ <strong>Registration Number :</strong>  <input type="text" name="reg" id="regno"> <br>
+ <hr>
+
+
+ <center><h2>User Details</h2></center><hr>
+
+       <!-- <strong> Unique Identity Number : </strong><input type="text" name="uid" id="uid"><br><br> -->
+        
+       
+            <strong>  Institution Name : </strong><input type="text" name="Institution" id="institution"><br>
+            <strong> Year Of Joining : </strong><input type="text" name="join" pattern="\d{4}" id="joinyear"><br>
+          <strong>  Regulation : </strong><input type="text" name="regulation" id="regulation"><br>
+         
+         <strong >Branch : </strong> <input type="text" name="branch" id="branch">
+         
+         <hr>
+
+         
+ 
+<!--Personal Details-->
+
+ <center><h2>Parent Details</h2> <hr></center>
+ 
+ <strong> Father Name : </strong><input type="text" name="fname"  id="fname"> <br> 
+ <strong> Mother Name : </strong><input type="text" name="mname"  id="mname"> <br> 
+ <strong> Mobile Number :</strong> <input type="text" name="phone"   id="phone"><br> 
+ <strong> Alternate Mobile Number :</strong> <input type="text" name="phone"   id="altphone"><br> 
+ <hr>
+ 
+ <center><h2>Personal Details</h2> <hr></center>
+  
+  <strong>Date of Birth :</strong> <input type="text" name="dob" id="dob"> <br> 
+  <strong >Gender : </strong> <input type="text" name="gender" id="gender"> <br> 
+
+ <strong>Aadhar Number : </strong> <input type="text" name="aadhar" id="aadhar"> <strong> URL : </strong><input type="url" name="aadhardoc" id="aadhardoc"  placeholder="Input your google docs link"size=30 required> <br>
+ <strong>Annual Income : </strong>  <input type="text" name="income" id="income"> <strong> URL : </strong> <input type="url" name="incomedoc" id="incomedoc" placeholder="Input your google docs link"size=30 required> <br>
+ <strong> Caste : </strong><input type="text" name="caste" id="caste"> <strong> URL : </strong><input type="url" name="castedoc" id="castedoc" placeholder="Input your google docs link"size=30 required><br>
+
+
+ <!-------Automatic filled if one field is same as another------->
+
+
+ <strong for="primaryaddress">Temporary Address:</strong>
+  <input type="text" name="Address"id="primaryaddress"required /> 
+  <strong for="primaryzip">Zip code:</strong>
+  <input type="text"name="Zip code"id="primaryzip" required /> <br>		
+	<strong for="secondaryaddress">Permanent	Address:</strong>
+	<input type="text"name="Address"id="secondaryaddress"required> 
+	<strong for="secondaryzip">Zip code:</strong>
+	<input type="text"name="Zip code"id="secondaryzip" required > <br>
+       
+  <hr>
+
+  <!--Previous Graduation Details-->
+
+       <center><h2>Previous Graduation Details</h2></center> <hr>
+ <h4>SSC Details: </h4><br>
+     <strong>  HallTicket Number : </strong><input type="text" name="halticket" id="sscticket"> <br>
+      <strong> Percentage : </strong><input type="text" name="percentage"   title="This must be a number with up to 2 decimal places and/or %/convert cgpa into percentage" id="sscpercentage"><br>
+       <strong for="url">Certificate :</strong>
+        <input type="url" name="url" id="sscurl" placeholder="Input your google docs link" size="30"required> <br>
+ <strong> Year Of Pass : </strong><input type="text" name="year"  id="sscyear"><br>
+ <h4>Intermediate/Diploma Details : </h4><br>
+       <strong> HallTicket Number : </strong><input type="text" name="halticket" id="interticket"> <br>
+      <strong>  Percentage : </strong><input type="text" name="percentage"  title="This must be a number with up to 2 decimal places and/or %" id="interpercentage"><br>
+        <strong for="url">Certificate :</strong>
+        <input type="url" name="url" id="interurl" placeholder="Input your google docs link" size="30"required> <br>
+       <strong> Year Of Pass : </strong><input type="text" name="year"  id="interyear"><br>
+<hr>
+
+<center > <a href="./student_fill_profile.html"> <input type="button" name="update" id="update" value="Click Here To update Profile" >  </a></center>
+ 
+</form>
+<script src="./js/view_student_profile.js"></script>
+</body>
+</html>

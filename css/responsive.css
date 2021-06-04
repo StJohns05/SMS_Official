@@ -1,10 +1,10 @@
 /* (1366x768) WXGA Display */
 
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
+/* @media screen and (min-width: 1441px) and (max-width: 1920px) {
     .error-content {
         margin-top: 100px;
     }
-}
+} */
 
 /*Medium Desktop Device*/
 
@@ -95,9 +95,9 @@
     }
 
     /* error page */
-    .error-content {
+    /* .error-content {
         margin-top: 100px;
-    }
+    } */
 
     /* dashboard three */
     #salesanalytic {
@@ -385,7 +385,7 @@
     }
 
     /* maps */
-    #mapamchart1,
+    /* #mapamchart1,
     #mapamchart2,
     #mapamchart3,
     #mapamchart4,
@@ -395,7 +395,7 @@
     }
     #google_map {
         height: 400px;
-    }
+    } */
 
     /* login page */
     .ptb--100 {
@@ -717,7 +717,7 @@
         display: block;
     }
     /* Dashboard Two */
-    #visitor_graph {
+    /* #visitor_graph {
         height: 300px;
     }
     .pagination_area {
@@ -752,33 +752,33 @@
     }
     .s-member:last-child {
         margin-bottom: 0;
-    }
+    } */
     /* bar Chart*/
-    #ambarchart1,
+    /* #ambarchart1,
     #ambarchart2,
     #ambarchart3,
     #ambarchart4,
     #ambarchart5,
     #ambarchart6 {
         height: 250px;
-    }
+    } */
     /* line chart */
-    #amlinechart1,
+    /* #amlinechart1,
     #amlinechart2,
     #amlinechart3,
     #amlinechart4,
     #amlinechart5 {
         height: 250px;
-    }
+    } */
     /* pie chart */
-    #ampiechart1,
+    /* #ampiechart1,
     #ampiechart2,
     #ampiechart3,
     #highpiechart4,
     #highpiechart5,
     #highpiechart6 {
         height: 250px;
-    }
+    } */
     /* accordion  */
     .according .card-header a {
         padding: 12px 15px;
@@ -805,7 +805,7 @@
     }
 
     /* maps */
-    #mapamchart1,
+    /* #mapamchart1,
     #mapamchart2,
     #mapamchart3,
     #mapamchart4,
@@ -815,22 +815,22 @@
     }
     #google_map {
         height: 300px;
-    }
+    } */
 
     /* invoice */
-    .invoice-date {
+    /* .invoice-date {
         margin-top: 20px;
-    }
-    .invoice-buttons a {
+    } */
+    /* .invoice-buttons a {
         padding: 12px 12px;
-    }
-    .login-form-head,
+    } */
+    /* .login-form-head,
     .login-form-body {
         padding: 40px 20px;
-    }
-    .rmber-area {
+    } */
+    /* .rmber-area {
         font-size: 12px;
-    }
+    } */
 
     /* dashboard thee */
     .seo-fact #seolinechart3,
