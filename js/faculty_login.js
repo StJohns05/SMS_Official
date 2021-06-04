@@ -144,7 +144,7 @@ function login() {
     console.log(cred);
     document.querySelector("#loginForm").reset();
     // sessionStorage.setItem("user", JSON.stringify(auth.currentUser));
-    window.location.href = "./facultyafterlogin.html";
+    window.location.href = "./fac_dash.html";
   })
   .catch((error) => {
     const errorCode = error.code;
