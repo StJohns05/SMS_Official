@@ -45,7 +45,7 @@
                
                 if(regno.match(regis))
                 {
-                    if(regno!=null || regno!=""){
+                    if(regno!== null || regno!== ""){
                         
                     alert("Data has been saved successfully!!");
                     }
@@ -61,11 +61,14 @@
             
 
 
-                document.getElementById("export").onclick=function(){
+               document.getElementById("export").onclick=function(){
                     var tableId= document.getElementById("tableData").id;
                     htmlTableToExcel(tableId, filename = "");
                 }
                var htmlTableToExcel= function(tableId, fileName = ""){
+
+                   //I have given my excel url over here:
+
                 var excelFileName="C:\Users\AMULYA\Desktop\SMS.xlsx";
                 var TableDataType = 'application/vnd.ms-excel';
                 var selectTable = document.getElementById(tableId);
