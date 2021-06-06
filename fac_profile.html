@@ -50,7 +50,7 @@
     <div class="container"> 
   <center><h1>--Fill The Details--</h1></center>
   <legend>
-    <form action="#">
+    <!-- <form action="#"> -->
  <hr>
 
  <center><h2>Login Details</h2></center>
@@ -99,7 +99,7 @@
 
         <center><h2>Assigned Department Details</h2></center><hr>
 
-       <strong> Unique Identity Number : </strong><input type="text" name="uid" pattern="[0-9]{4}" id="uniqueid" required ><br> 
+       <strong> Unique Identity Number : </strong><input type="text" name="uid" pattern="[0-9]{4}" id="id" required ><br> 
         
        <strong>Branch : </strong> <br>
             <label><b>Select Branch:</b></label>
@@ -118,14 +118,17 @@
          <hr>
          <div>
          
-         <center > <input type="button" name="update" id="update"  value="save">
+         <!-- <center > <input type="button" name="update" id="update"  value="save"> -->
+          <center><button id="update" onclick="up_()" >update</button>
+
            
           <a href="fac_view.html"> <input type="button" name="Save" id="save" value="click here to view profile" /> </a></center>
+
 
          
         </div>
    
-</form>
+<!-- </form> -->
 </legend>
 <script src="./js/faculty_update_profile.js"></script>
 </body>

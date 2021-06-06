@@ -44,24 +44,89 @@ auth.onAuthStateChanged(function(user) {
   
 
 });
+// // var uniqueid,facultybranch,join;
+
+// // function getdata(){
+// //   uniqueid=document.getElementById("uniqueid").value;
+// //   facultybranch=document.getElementById("facultybranch").value;
+// //   join=document.getElementById("join").value;
+// // }
+
+ 
+// document.getElementById('update').onclick=function(){
+//   getdata();
+//   firebase.database().ref("faculty_details/"+ faculty.uid).set({
+//     Uniqueid : uniqueid,
+//     Branch : facultybranch,
+//     Join : join,
+//   });
+  
+// }
 var uniqueid,facultybranch,join;
 
 function getdata(){
-  uniqueid=document.getElementById("uniqueid").value;
+  uniqueid=document.getElementById("id").value;
   facultybranch=document.getElementById("facultybranch").value;
   join=document.getElementById("join").value;
 }
 
  
-document.getElementById('update').onclick=function(){
+// document.getElementById('update').onclick=function(){
+ 
+// }
+
+function up_() {
   getdata();
   firebase.database().ref("faculty_details/"+ faculty.uid).set({
     Uniqueid : uniqueid,
     Branch : facultybranch,
     Join : join,
   });
-  
+  alert("success");
 }
+
+var faculty;
+auth.onAuthStateChanged(function(user) {
+
+  faculty = user;
+  // const id = user.uid;
+
+  console.log(user.uid); 
+
+
+database.ref().child("faculty_details").child(faculty.uid).get().then(  (snapshot) => {
+  
+    if (snapshot.exists()) {
+        console.log(snapshot.val());
+        let faculty_Details_Fetch = snapshot.val();
+        faculty_Details = Object.values(faculty_Details_Fetch);
+        console.log(faculty_Details);
+
+        set_Data(faculty_Details)
+
+
+  
+    }else{
+      console.log('If failed');
+    }
+  })
+  .catch((e) => {
+    a = String.toString(e);
+      console.log(a);
+  });
+  
+});
+
+function set_Data(faculty_Details) {
+  
+  data = faculty_Details;
+  console.log('data : ' + data);
+  let set_Branch = document.getElementById('facultybranch').value=(data[0]);
+  let set_Join = document.getElementById('join').value=(data[1]);
+  let set_UniqueId = document.getElementById('id').value=(data[2]);
+}
+
+
 
 
 
