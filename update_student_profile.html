@@ -28,9 +28,9 @@
        <!-- <strong> Unique Identity Number : </strong><input type="text" name="uid" id="uid"><br><br> -->
         
        
-            <strong>  Institution Name : </strong><input type="text" name="Institution" id="institution"><br><br>
-            <strong> Year Of Joining : </strong><input type="text" name="join" pattern="\d{4}" id="joinyear"><br><br>
-          <strong>  Regulation : </strong><input type="text" name="regulation" id="regulation"><br><br>
+            <strong>  Institution Name : </strong><input type="text" name="Institution" pattern="[A-Z/S][a-z/s]*" required id="institution"><br><br>
+            <strong> Year Of Joining : </strong><input type="text" name="join" pattern="[0-9]{4}" required id="joinyear"><br><br>
+          <strong>  Regulation : </strong><input type="text" name="regulation"  pattern="[A-Z]{1}[0-9]{2}" required id="regulation"><br><br>
          
          <strong >Branch : </strong> 
             <label><b>Select Branch:</b></label>
@@ -53,10 +53,10 @@
 
  <center><h2>Parent Details</h2> <hr></center>
  
- <strong> Father Name : </strong><input type="text" name="fname" pattern="[a-zA-Z]{4,20}" id="fname"> <br> <br>
- <strong> Mother Name : </strong><input type="text" name="mname" pattern="[a-zA-Z]{4,20}" id="mname"> <br> <br>
- <strong> Mobile Number :</strong> <input type="text" name="phone" pattern="(6|7|8|9)\d{9}" title="Enter valid number" id="fphone"><br> <br>
- <strong> Alternate Mobile Number :</strong> <input type="text" name="phone" pattern="(6|7|8|9)\d{9}" title="Enter valid number" id="altphone"><br> <br>
+ <strong> Father Name : </strong><input type="text" name="fname" pattern="[A-Z]{1}[a-z]*" required id="fname"> <br> <br>
+ <strong> Mother Name : </strong><input type="text" name="mname" pattern="[A-Z]{1}[a-z]*" required id="mname"> <br> <br>
+ <strong> Mobile Number :</strong> <input type="text" name="phone" pattern="[6789]\d{9}" required title="Enter valid number" id="fphone"><br> <br>
+ <strong> Alternate Mobile Number :</strong> <input type="text" name="phone" pattern="[6789]\d{9}" required title="Enter valid number" id="altphone"><br> <br>
  <hr>
  
  <center><h2>Personal Details</h2> <hr></center>
@@ -70,8 +70,8 @@
               <option value="female">female</option>
               <option value="male">male</option></select><br><br>
 
- <strong>Aadhar Number : </strong> <input type="text" name="aadhar" id="aadhar"> <strong> URL : </strong><input type="url" name="aadhardoc" id="aadhardoc" pattern="http://[A-Za-z]+[A-Za-z0-9\.-]*[^\.]\.com" title="A valid value must begin with the string 'http://', followed by a valid .com domain name" placeholder="Input your google docs link"size=30 required> <br><br>
- <strong>Annual Income : </strong>  <input type="text" name="income" id="income"> <strong> URL : </strong> <input type="url" name="incomedoc" id="incomedoc" pattern="http://[A-Za-z]+[A-Za-z0-9\.-]*[^\.]\.com" title="A valid value must begin with the string 'http://', followed by a valid .com domain name"placeholder="Input your google docs link"size=30 required> <br><br>
+ <strong>Aadhar Number : </strong> <input type="text" name="aadhar" id="aadhar" pattern="[1-9]{12}" required> <strong> URL : </strong><input type="url" name="aadhardoc" id="aadhardoc" pattern="http://[A-Za-z]+[A-Za-z0-9\.-]*[^\.]\.com" title="A valid value must begin with the string 'http://', followed by a valid .com domain name" placeholder="Input your google docs link"size=30 required> <br><br>
+ <strong>Annual Income : </strong>  <input type="text" name="income" id="income" pattern="[1-9]{1}[0-9]"> <strong> URL : </strong> <input type="url" name="incomedoc" id="incomedoc" pattern="http://[A-Za-z]+[A-Za-z0-9\.-]*[^\.]\.com" title="A valid value must begin with the string 'http://', followed by a valid .com domain name"placeholder="Input your google docs link"size=30 required> <br><br>
  <strong> Caste : </strong><input type="text" name="caste" id="caste"> <strong> URL : </strong><input type="url" name="castedoc" id="castedoc" pattern="http://[A-Za-z]+[A-Za-z0-9\.-]*[^\.]\.com" title="A valid value must begin with the string 'http://', followed by a valid .com domain name"placeholder="Input your google docs link"size=30 required><br><br>
 
 
@@ -87,30 +87,35 @@
 	<strong for="secondaryaddress">Permanent	Address:</strong>
 	<input type="text"name="Address"id="secondaryaddress"required> <br><br>
 	<strong for="secondaryzip">Zip code:</strong>
-	<input type="text"name="Zip code"id="secondaryzip"pattern="[0-9]{6}" required > <br><br>
+	<input type="text"name="Zip code"id="secondaryzip" pattern="[0-9]{6}" required > <br><br>
        
   <hr>
 
   <!--Previous Graduation Details-->
 
        <center><h2>Previous Graduation Details</h2></center> <hr>
+
  <h4>SSC Details: </h4><br>
-     <strong>  HallTicket Number : </strong><input type="text" name="halticket" id="sscticket"> <br><br>
-      <strong> Percentage : </strong><input type="text" name="percentage"  pattern="[0-9]+([\.][0-9]{0,2})?" title="This must be a number with up to 2 decimal places and/or %/convert cgpa into percentage" id="sscpercentage"><br><br>
+     <strong>  HallTicket Number : </strong><input type="text" name="halticket" id="sscticket" pattern="[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{4}" required> <br><br>
+      <strong> Percentage : </strong><input type="text" name="percentage" pattern="[0-9]+([\.][0-9]{0,2})?" required title="This must be a number with up to 2 decimal places and/or %/convert cgpa into percentage" id="sscpercentage"><br><br>
        <strong for="url">Certificate :</strong>
         <input type="url" name="url" id="sscurl" placeholder="Input your google docs link"pattern="https://.*" size="30"required> <br><br>
- <strong> Year Of Pass : </strong><input type="text" name="year" pattern="\d{4}" id="sscyear"><br><br>
+ <strong> Year Of Pass : </strong><input type="text" name="year" pattern="[0-9]{4}" required id="sscyear"><br><br>
+
+
  <h4>Intermediate/Diploma Details : </h4><br>
-       <strong> HallTicket Number : </strong><input type="text" name="halticket" id="interticket"> <br><br>
-      <strong>  Percentage : </strong><input type="text" name="percentage" pattern="[0-9]+([\.][0-9]{0,2})?" title="This must be a number with up to 2 decimal places and/or %" id="interpercentage"><br><br>
+
+       <strong> HallTicket Number : </strong><input type="text" name="halticket" id="interticket" pattern="[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{4}" required> <br><br>
+      <strong>  Percentage : </strong><input type="text" name="percentage" pattern="[0-9]+([\.][0-9]{0,2})?" required title="This must be a number with up to 2 decimal places and/or %" id="interpercentage"><br><br>
         <strong for="url">Certificate :</strong>
         <input type="url" name="url" id="interurl" placeholder="Input your google docs link"pattern="https://.*" size="30"required> <br><br>
-       <strong> Year Of Pass : </strong><input type="text" name="year" pattern="\d{4}" id="interyear"><br><br>
+       <strong> Year Of Pass : </strong><input type="text" name="year" pattern="[0-9]{4}" required id="interyear"><br><br>
 <hr>
 
 
 
-          <center><input type="button" name="Save" id="save" onclick="check()" value="Save"></center>
+          <center><input type="button" name="Save" id="save" onclick="check()" value="Save">
+          <a href="./view_student_profile.html"><input type="button" id="update" value="check profile"></a></center>
 
  
 </form>
