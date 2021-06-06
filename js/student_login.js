@@ -143,7 +143,7 @@ function login() {
     console.log(cred);
     document.querySelector("#loginForm").reset();
     // sessionStorage.setItem("user", JSON.stringify(auth.currentUser));
-    window.location.href = "./sdashboard.html";
+    window.location.href = "./studentdashboard.html";
   })
   .catch((error) => {
     const errorCode = error.code;
