@@ -10,7 +10,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
     <style>
-      input,#d1 { 
+      input,#d1,#branch { 
             pointer-events: none; 
         } 
         body {  
@@ -107,19 +107,8 @@
 
        <strong> Unique Identity Number : </strong><input type="text" name="uid" id="uniqueid"><br>
         
-       <strong>Branch : </strong> <br>
-            <label><b>Select Branch:</b></label>
-            <select id="facultybranch">
-              <option value="">Branch</option>
-              <option value="CSE">CSE</option>
-              <option value="ECE">ECE</option>
-              <option value="MECH">MECH</option>
-              <option value="EEE">EEE</option>
-              <option value="CIVIL">CIVIL</option>
-              <option value="AI">ARTIFICIAL INTELLIGENCE</option>
-              
-            </select><br><br>
-            <strong> Year Of Joining : </strong><input type="text" name="join" id="join" required><br>
+       <strong >Branch : </strong> <input type="text" name="branch" id="branch"><br>
+                   <strong> Year Of Joining : </strong><input type="text" name="join" id="join" required readonly><br>
          <hr>
 
          <center > <a href="fac_profile.html"> <input type="button" name="update" id="update" value="Click Here To update Profile" >  </a></center>

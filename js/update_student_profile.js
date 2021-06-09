@@ -95,20 +95,16 @@ function get_Data(){
   interurl=document.getElementById("interurl").value;
   interyear=document.getElementById("interyear").value;
 }
-//validation
-// function check() {
-//   if(document.getElementById("branch").value !== "Branch")
-//       {
-//           if(document.getElementById("gender").value !== "gender"){
-//          alert("Please fill out all details to Check ur profile ");
-//       }
-//      }
-//       else{
-//          alert("Profile has been Saved Successfully!! you can Check ur profile ");
-//       }
-//     }
 
 
+
+
+
+
+
+
+
+//address validation
 function addressFunction() {
   if (document.getElementById(
   "same").checked) {
@@ -129,6 +125,270 @@ function addressFunction() {
   }
 }
 document.getElementById('save').onclick=function(){
+
+ 
+  //fields  validation(UI)
+  
+  //it checks each field if any field found empty then it warns with an alert
+
+  var institution=document.getElementById("institution");
+  
+      if(institution.value=="")
+		{
+     
+    	alert("Please enter Institution Name properly");
+			institution.focus();
+			return false;
+		}
+
+    
+//join year
+	var joinyear=document.getElementById("joinyear");
+		if(joinyear.value=="")
+		{
+     alert("Please enter Joining year!");
+		joinyear.focus();
+		return false;
+		}
+    
+
+ //regulation
+	var regulation=document.getElementById("regulation");
+		if(regulation.value=="")
+		{
+      
+		alert("Please enter Regulation!");
+		regulation.focus();
+		return false;
+		}
+     
+
+      //dob
+	var dob=document.getElementById("dob");
+		if(dob.value=="")
+		{
+     alert("Please enter Date Of Birth!");
+		dob.focus();
+		return false;
+		}
+    
+
+    //father name
+	var fname=document.getElementById("fname");
+		if(fname.value=="")
+		{
+     
+		alert("Please enter Father name!");
+		fname.focus();
+		return false;
+		}
+  
+   
+//mother name
+	var mname=document.getElementById("mname");
+		if(mname.value=="")
+		{
+      
+		alert("Please enter Mothers name!");
+		mname.focus();
+		return false;
+		
+  }
+ 
+
+    //father mobile
+	var fphone=document.getElementById("fphone");
+		if(fphone.value=="")
+		{
+     
+		alert("Please enter Mobile Number!");
+		fphone.focus();
+		return false;
+		}
+  
+  
+//branch
+	var branch=document.getElementById("branch");
+		if(branch.value=="")
+		{
+      
+		alert("Please Select Branch");
+		branch.focus();
+		return false;
+		}
+  //gender
+	var gender=document.getElementById("gender");
+		if(gender.value=="")
+		{
+		alert("please Select Gender");
+		gender.focus();
+		return false;
+  }
+
+  //aadhar
+  var aadhar=document.getElementById("aadhar");
+  if(aadhar.value=="")
+  {
+   
+  alert("Please enter Aadhar Number");
+  aadhar.focus();
+  return false;
+    }
+   
+
+        //aadhar doc
+var aadhardoc=document.getElementById("aadhardoc");
+if(aadhardoc.value=="")
+{
+  
+alert("Please provide the link of aadhar Document!");
+aadhardoc.focus();
+return false;
+}
+
+
+//income
+var income=document.getElementById("income");
+if(income.value=="")
+{
+alert("Please enter ANNUAL INCOME!");
+income.focus();
+return false;
+}
+//income doc
+var incomedoc=document.getElementById("incomedoc");
+if(incomedoc.value=="")
+{
+alert("Please provide the document link of Income details");
+incomedoc.focus();
+return false;
+}
+//caste
+var caste=document.getElementById("caste");
+if(caste.value=="")
+{
+alert("Please enter caste");
+gender.focus();
+return false;
+}
+//caste doc
+var castedoc=document.getElementById("castedoc");
+if(castedoc.value=="")
+{
+alert("Please provide the document link of caste details!");
+castedoc.focus();
+return false;
+}
+//address
+var primaryaddress=document.getElementById("primaryaddress");
+if(primaryaddress.value=="")
+{
+alert("Specify the Address!!");
+primaryaddress.focus();
+return false;
+}
+//zipcode 
+var primaryzip=document.getElementById("primaryzip");
+if(primaryzip.value=="")
+{
+alert("Enter the Zipcode");
+primaryzip.focus();
+return false;
+}
+//checkbox 
+var same=document.getElementById("same");
+if(same.value=="")
+{
+alert("select checkbox to autofill secondary address if it is same as primary address!!");
+same.focus();
+return false;
+}
+//secondary address
+var secondaryaddress=document.getElementById("secondaryaddress");
+if(secondaryaddress.value=="")
+{
+alert("Specify secondary Address!!");
+secondaryaddress.focus();
+return false;
+}
+//zip
+var secondaryzip=document.getElementById("secondaryzip");
+if(secondaryzip.value=="")
+{
+alert("Enter Zipcode");
+secondaryzip.focus();
+return false;
+}
+
+//10th hallticket validation
+var sscticket=document.getElementById("sscticket");
+if(sscticket.value=="")
+{
+alert("Provide the SSC Hallticket Number!!");
+sscticket.focus();
+return false;
+}
+//percentage validation
+var sscpercentage=document.getElementById("sscpercentage");
+if(sscpercentage.value=="")
+{
+alert("Enter The Percentage of SSC!!");
+sscpercentage.focus();
+return false;
+}
+//ssc certificate validation
+var sscurl=document.getElementById("sscurl");
+if(sscurl.value=="")
+{
+alert("Provide the Document link Of SSC Certificate!");
+sscurl.focus();
+return false;
+}
+//ssc year of pass
+var sscyear=document.getElementById("sscyear");
+if(sscyear.value=="")
+{
+alert("Enter SSC Year of Pass!");
+sscyear.focus();
+return false;
+}
+//inter hallticket
+var interticket=document.getElementById("interticket");
+if(interticket.value=="")
+{
+alert("Provide the Inter Hallticket Number!");
+interticket.focus();
+return false;
+}
+//inter percentage
+var interpercentage=document.getElementById("interpercentage");
+if(interpercentage.value=="")
+{
+alert("Enter inter percentage!");
+interpercentage.focus();
+return false;
+}
+//inter certificate url
+var interurl=document.getElementById("interurl");
+if(interurl.value=="")
+{
+alert("Please Provide the document link of Inter Certificate ");
+interurl.focus();
+return false;
+}
+//inter year of pass
+var interyear=document.getElementById("interyear");
+if(interyear.value=="")
+{
+alert("Enter Inter year of pass!!");
+gender.focus();
+return false;
+}
+ 	//if all fields are non empty data has to save in firebase
+
+else{
+ 
+
   get_Data();
   firebase.database().ref("students_details/"+ student.uid).set({
     Institution : institution,
@@ -158,16 +418,20 @@ document.getElementById('save').onclick=function(){
     Inter_Year_Of_pass : interyear,
   
   });
+
   firebase.database().ref("students_details/" + student.uid + "/parent_details").set({
     Father_Name : fname,
     Mother_Name : mname,
     Mobile_Number : fphone,
     Alternate_Mobile_Number : altphone,
   });
-
-  alert("Data submitted Successfully");
-
 }
+alert("------Data has been succesfuuly saved------U can view ur profile now!!");
+}
+ 
+
+
+
 
 // const dbRef = firebase.database().ref();
 // dbRef.child("students_details").child(209189857677).get().then((snapshot) => {
@@ -275,3 +539,17 @@ function set_Data(student_Details) {
   let mother_Name = document.getElementById('mname').value=(parent_Details[3]);
   console.log('seted');
 }
+//validations
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
