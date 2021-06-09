@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>   
+      body {  
+        font-family: Calibri, Helvetica, sans-serif;  
+       
+               margin-top:100px;
+               margin-bottom:100px;
+               margin-left:100px;
+                margin-right:100px;
+                background-color:white;
+                background-size: cover;
+                background-position: center;
+                
+                  
+      
+      }  
+          
+ .container {   
+        padding: 100px;   
+        background-color:#8a3147;  
+        
+    }  
+    button a{
+      text-decoration: none;
+      color: black;
+      
+    } 
+  
+      </style>
+      
+      
+  </head>
+<body>
+  
+<script src="js/selectregulation.js"></script>
+
+<h1> <center> ---Academic Information----</center></h1>
+<hr/>
+
+<div class="container"> 
+  <form method="POST">
+    <h2 style="color: white;">**Please select below options to enter semister marks!!**</h2>
+    <ul type="square" style="color: white;">
+        <li>
+  <label style="color: white;"><b>Select Regulation:</b></label>
+  <select id="d1">
+    <option value="">Reg</option>
+    <option value="0">R15</option>
+    <option value="1">R16</option>
+    <option value="3">R17</option>
+    <option value="4">R18</option>
+    <option value="5">R19</option>
+    <option value="6">R20</option>
+    <option value="7">R21</option>
+    <option value="8">R22</option>
+    <option value="9">R23</option>
+    <option value="10">R24</option>
+    <option value="11">R25</option>
+  </select></li></br>
+   
+  <li>
+  <label style="color:white"><b>Select Year:</b></label>
+  <select id="d2">
+    <option value="">Year</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+    <option value="2026">2026</option>
+    <option value="2027">2027</option>
+    <option value="2028">2028</option>
+  </select></li></br>
+
+  <li>
+  <label style="color: white;"><b>Select Branch:</b></label>
+  <select id="d3">
+    <option value="">Branch</option>
+    <option value="CSE">CSE</option>
+    <option value="ECE">ECE</option>
+    <option value="MECH">MECH</option>
+    <option value="EEE">EEE</option>
+    <option value="CIVIL">CIVIL</option>
+    <option value="AI">ARTIFICIAL INTELLIGENCE</option>
+    
+  </select></li></br>
+  
+  <li>
+  <label style="color: white;"><b>Select Semister:</b></label>
+  <select id="d4">
+    <option value="">Sem</option>
+    <option value="1-1">1-1</option>
+    <option value="1-1">1-2</option>
+    <option value="1-1">2-1</option>
+    <option value="1-1">2-2</option>
+    <option value="1-1">3-1</option>
+    <option value="1-1">3-2</option>
+    <option value="1-1">4-1</option>
+    <option value="1-1">4-2</option>
+  </select></li></br>
+  </ul>
+ 
+<button type="onsubmit" onclick="return checkvalue();"><a href="studentsem.html" target="_self">
+  ---->Click here to enter Student Marks---></a></button></br>
+
+  <label><p style="color:white;"><b>Select an Excel File to upload student marks:</b></p></label>
+  <input type="file" style="color: white;" id="myfile" name="myfile" multiple />
+</form>
+
+</div>
+<hr/>
+</body>
+</html>
