@@ -54,6 +54,15 @@
 
 /*------------------------- 1. Core Css -------------------*/
 
+#sign-out-btn {
+
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+}
+
+
 .page-container {
     width: 100%;
     height: 100%;
@@ -120,6 +129,7 @@
     letter-spacing: 0;
     font-weight: 400;
 }
+
 
 .metismenu li a i {
     color:black;

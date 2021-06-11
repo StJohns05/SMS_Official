@@ -1,0 +1,49 @@
+#name,#email,#phone,#regno { 
+    pointer-events: none; 
+} 
+ 
+.container {   
+
+  background-color:#8a3147;  
+  color: white;
+  margin-top: 20px;
+  
+} 
+input{
+width: 250px;
+background-color: white;
+position: relative;
+display:grid;
+outline: none;
+line-height: 1;
+font-weight: 500;
+font-size: 1.1rem;
+}
+li{
+list-style: none;
+}
+#same{
+width: auto;
+}
+#dob{
+width: 100px;
+}
+button[type=button] {    
+background-color: #8a3147;    
+color: white;    
+padding: 12px 20px;    
+border: none;    
+border-radius: 4px;    
+cursor: pointer;    
+float: left; 
+margin-top: 10px; 
+
+margin-right: 3px;
+}    
+  
+button[type=button]:hover {    
+background-color:#ac5168;    
+} 
+label b{
+    color: white;
+}

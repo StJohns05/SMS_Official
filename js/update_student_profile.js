@@ -1,18 +1,23 @@
-//Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "AIzaSyDuu4FIsR0yRIkOrtu6T59lqfPbN7SG53M",
-  authDomain: "sms-demo-9ec85.firebaseapp.com",
-  databaseURL: "https://sms-demo-9ec85-default-rtdb.firebaseio.com",
-  projectId: "sms-demo-9ec85",
-  storageBucket: "sms-demo-9ec85.appspot.com",
-  messagingSenderId: "401316316472",
-  appId: "1:401316316472:web:2929d9673d92fbfbb66dcd"
-};
+// //Your web app's Firebase configuration
+// var firebaseConfig = {
+//   apiKey: "AIzaSyDuu4FIsR0yRIkOrtu6T59lqfPbN7SG53M",
+//   authDomain: "sms-demo-9ec85.firebaseapp.com",
+//   databaseURL: "https://sms-demo-9ec85-default-rtdb.firebaseio.com",
+//   projectId: "sms-demo-9ec85",
+//   storageBucket: "sms-demo-9ec85.appspot.com",
+//   messagingSenderId: "401316316472",
+//   appId: "1:401316316472:web:2929d9673d92fbfbb66dcd"
+// };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
-const auth = firebase.auth();
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
+// const database = firebase.database();
+// const auth = firebase.auth();
+
+
+
+
+
 
 
 const studentName = document.querySelector("#name");
@@ -129,6 +134,7 @@ function addressFunction() {
   }
 }
 document.getElementById('save').onclick=function(){
+  
   get_Data();
   firebase.database().ref("students_details/"+ student.uid).set({
     Institution : institution,
@@ -237,6 +243,9 @@ database.ref().child("students_details").child(student.uid).get().then(  (snapsh
 });
 
 function set_Data(student_Details) {
+
+ 
+
   console.log('started....');
   data = student_Details;
   const parent_Details = Object.values( data[24]);
@@ -275,3 +284,19 @@ function set_Data(student_Details) {
   let mother_Name = document.getElementById('mname').value=(parent_Details[3]);
   console.log('seted');
 }
+
+
+//for log out button
+
+// function noBack()
+//          {
+//              window.history.forward()
+//          }
+//         noBack();
+//         window.onload = noBack;
+//         window.onpageshow = function(evt) { if (evt.persisted) noBack() }
+//         window.onunload = function() { void (0) }
+
+
+
+       

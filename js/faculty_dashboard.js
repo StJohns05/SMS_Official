@@ -14,11 +14,26 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const auth = firebase.auth();
 
-const facultyName = document.querySelector("#faculty-name"); 
+
+const facultyNameDisplay = document.querySelector("#faculty-name"); 
 
 auth.onAuthStateChanged(function(user) {
 
-    console.log(user.displayName);
-    facultyName.innerHTML = user.displayName + "<i class='fa fa-angle-down'></i>";
+  // console.log(user.displayName);
+  if (user) {
+  
+          facultyNameDisplay.innerHTML = user.displayName + "<i class='fa fa-angle-down'></i>";
+  } else {
+          window.location.href = "./faculty_login.html";
+  }      
+});
+
+const signOutBtn = document.querySelector("#sign-out-btn");
+
+signOutBtn.addEventListener("click", function() {
+
+        
+        auth.signOut();
+        window.location.href = "./faculty_login.html";
 });
 
